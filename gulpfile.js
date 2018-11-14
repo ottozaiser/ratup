@@ -27,10 +27,9 @@ newer           = require('gulp-newer');
 
 gulp.task('browserSync', function() {
     browserSync({
-        open: 'external',
-        proxy: './dist',
-        host: './dist',
-        port: 80,
+        server: {
+            baseDir: _dist
+        },
         options: {
             reloadDelay: 250
         },
@@ -251,8 +250,8 @@ gulp.task('watch', ['browserSync', 'scripts', 'vendor-scripts', 'styles', 'vendo
     gulp.watch(_app+'/scss/vendor/**', ['vendor-styles']);
     gulp.watch(_app+'/scss/**', ['styles']);
     gulp.watch(_app+'/images/**', ['images']);
-    gulp.watch(_dist+'/*.php', ['php']);
-    gulp.watch(_dist+'/*.html', ['html']);
+    gulp.watch(_app+'/*.php', ['php']);
+    gulp.watch(_app+'/*.html', ['html']);
 });
 //this is the main watcher to use when in active development
 //  this will:
@@ -262,8 +261,8 @@ gulp.task('watch', ['browserSync', 'scripts', 'vendor-scripts', 'styles', 'vendo
 gulp.task('watchcss', ['browserSync', 'styles', 'php'], function() {
     //a list of watchers, so it will watch all of the following files waiting for changes
     gulp.watch(_app+'/scss/**', ['styles']);
-    gulp.watch(_dist+'/*.php', ['php']);
-    gulp.watch(_dist+'/*.html', ['html']);
+    gulp.watch(_app+'/*.php', ['php']);
+    gulp.watch(_app+'/*.html', ['html']);
 });
 
 //this is our deployment task, it will set everything for deployment-ready files
