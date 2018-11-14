@@ -10,8 +10,17 @@ Instalar dependencias:
 Siempre trabajar en la carpeta 'app'. Luego los archivos finales para subir estarán en 'dist'.
 
 ## Comandos
-**"gulp watch"** para trabajar en los archivos  
-**"gulp watchcss"** para trabajar solo en los SCSS 
-**"gulp deploy"** para compilar, minimizar y optimizar archivos
+Para trabajar en los archivos:
+  ```sh
+  gulp watch
+  ```
+Para trabajar solo en los SCSS:
+  ```sh
+  gulp watchcss
+  ```
+Para compilar, minimizar y optimizar archivos:
+  ```sh
+  gulp deploy
+  ```
 
 [Node.js]: https://nodejs.org/en/

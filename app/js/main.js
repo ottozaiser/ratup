@@ -1,1 +1,18 @@
-!function(o){function a(){o(this).scrollTop()>110?o("#navbar").addClass("navbar-fondo"):o("#navbar").removeClass("navbar-fondo")}o(".bt-top").hide(),o(window).scroll(function(){a()}),a(),o("#toggle-password").on("click",function(a){a.preventDefault(),"text"==o("#pwd").attr("type")?(o("#pwd").attr("type","password"),o("#toggle-password .toggle-icon").removeClass("fa-eye-slash"),o("#toggle-password .toggle-icon").addClass("fa-eye")):"password"==o("#pwd").attr("type")&&(o("#pwd").attr("type","text"),o("#toggle-password .toggle-icon").addClass("fa-eye-slash"),o("#toggle-password .toggle-icon").removeClass("fa-eye"))})}(jQuery);
+(function ($) {
+
+    $("#toggle-password").on('click', function(event) {
+        event.preventDefault();
+        if($('#pwd').attr("type") == "text"){
+            $('#pwd').attr('type', 'password');
+            $('#toggle-password .toggle-icon').removeClass( "fa-eye-slash" );
+            $('#toggle-password .toggle-icon').addClass( "fa-eye" );            
+        }else if($('#pwd').attr("type") == "password"){
+            $('#pwd').attr('type', 'text');            
+            $('#toggle-password .toggle-icon').addClass( "fa-eye-slash" );
+            $('#toggle-password .toggle-icon').removeClass( "fa-eye" );
+        }
+    });
+
+})(jQuery);
+
+
