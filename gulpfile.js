@@ -167,7 +167,6 @@ gulp.task('html', function() {
     .pipe(browserSync.reload({stream: true}));
 });
 
-
 //compiling our SCSS files for deployment
 gulp.task('styles-deploy', function() {
     //the initializer / master SCSS file, which will just be a file that imports everything
