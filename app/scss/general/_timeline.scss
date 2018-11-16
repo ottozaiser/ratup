@@ -1,10 +1,40 @@
 .timeline{
-
+    margin-bottom: 150px;
+    .list-group-item{
+        border-left: 0;
+        border-right: 0;
+    }
+    .list-group-item:first-child{
+        border-radius: 0;
+    }
+    .list-group-item:last-child{
+        border-radius: 0;        
+    }
+    
     .perfil{
+        position: relative;
         img{
             width: 70px;
             height: 70px;
             border-radius: 40px;
+        }
+        .rating{
+            position: absolute;
+            display: block;
+            top: -5px;
+            left: -10px;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            line-height: 2.1em;
+            font-size: 1em;
+            width: 30px;
+            height: 30px;
+            font-weight: bold;
+            background-image: url('../images/star.svg');
+            background-repeat: no-repeat;
+            color: black;
+            
         }
     }
 

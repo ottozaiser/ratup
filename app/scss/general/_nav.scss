@@ -1,0 +1,16 @@
+nav.navbar {
+    padding: 0;
+    border-top: 1px solid $primaryColor;
+    ul.navbar-nav {
+        li.nav-item a.nav-link{
+            font-size: 1.25em;
+            padding: 12px 16px;
+            
+        }
+
+        li.nav-item.active a.nav-link{
+            color: $primaryColor;
+        }
+        
+    }
+}
