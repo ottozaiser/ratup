@@ -39,6 +39,7 @@ small, .font_small {font-size: 0.833em;}
     width: 70px;
     height: 70px;
     border-radius: 50%;
+    z-index: 1000;
     background: $primaryColor;
     position: fixed;
     bottom: 75px;
