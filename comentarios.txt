@@ -1,0 +1,57 @@
+JSON Generator https://www.json-generator.com/
+[
+  '{{repeat(120,150)}}',
+  {
+    index: '{{index()}}',
+    isActive: '{{bool()}}',   
+    age: '{{integer(20, 40)}}',
+    name: '{{firstName()}}',
+    surname: '{{surname()}}',
+    ranking: '{{integer(2,5)}}',
+    gender: '{{gender()}}',
+    picture: function (tags) {
+     var g;
+      var n = tags.integer(1,80) ;
+      if (this.gender == 'female'){
+        g = 'women';
+      }else{
+        g = 'men';
+      }
+      return 'https://randomuser.me/api/portraits/'+g+'/'+n+'.jpg';
+    },
+    email: '{{email()}}',
+    phone: '{{phone("xxxx-xxxx")}}',
+    location: '{{random( "Abasto","Barrio Norte","Belgrano","Caballito","Centro","Flores","Palermo","Puerto Madero","Villa Devoto","Zona Norte","Zona Oeste","Zona Sur")}}',
+    about: '{{lorem(30, "words")}}',
+    aviso: [
+      '{{repeat(1)}}',
+      {
+        pelicula: '{{random( "Alfa","Animales en apuros","Animales fantásticos 2","Bohemian Rhapsody","Camino sinuoso","Cold War","El Potro","El otro verano","El ángel","Escalofríos 2","Gonjiam: hospital maldito","Halloween","Infiltrado del kkklan","Los increíbles 2","Misión imposible 6","Nace una estrella","Operación Overlord","Rojo","Transit","Venom")}}',
+        dia: '{{date(new Date(2014, 0, 1), new Date(), "dd/MM")}}',
+        horario: '{{integer(12, 23)}}',
+        lugar: '{{random( "Abasto","Barrio Norte","Belgrano","Caballito","Centro","Flores","Palermo","Puerto Madero","Villa Devoto","Zona Norte","Zona Oeste","Zona Sur")}}',
+        tipo: '{{random( "invita GRATIS","comparte 2x1")}}',
+        mensaje: '{{lorem(10, "words")}}'
+      }
+    ],
+    comentarios: [
+      '{{repeat(3)}}',
+      {
+        name: '{{firstName()}}',
+        gender: '{{gender()}}',
+        picture: function (tags) {
+         var g;
+          var n = tags.integer(1,80) ;
+          if (this.gender == 'female'){
+            g = 'women';
+          }else{
+            g = 'men';
+          }
+          return 'https://randomuser.me/api/portraits/'+g+'/'+n;
+        },
+        stars: '{{integer(0,5)}}',
+        review: '{{lorem(10, "words")}}'
+      }
+    ]
+  }
+]
