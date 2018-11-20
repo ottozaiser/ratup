@@ -1,0 +1,37 @@
+.home{
+    text-align: center;
+    background: -webkit-linear-gradient(to right, $gradient, $primaryColor); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $gradient, $primaryColor); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: $secondaryColor;
+    font-weight: 300;
+    height: 100%;
+    margin-top: 30px;
+    input{
+        font-size: 1.2em;
+        padding: 30px;
+        margin-bottom: 10px;
+    }
+
+    p{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    
+    .buscar{
+        button.reset{
+            top: 12px;
+        }
+    }
+
+    .btn{
+        white-space: normal;
+        line-height: 1.2em;
+
+        .fas{
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+header.navbar {
+    color: $secondaryColor;
+    background-color: $primaryColor;
+
+    .navbar-name{
+        font-size: 1.1em;
+    }
+
+    a.nav-link {
+        color: $secondaryColor;
+        &:hover,
+        &:focus {
+            color: $highlightColor;
+        }
+
+        
+    }
+    a.back{
+        padding: .5rem 1rem;
+        padding-left: 0.5rem;
+        padding-right: 1.5rem;
+    }
+
+    h1{
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+    }
+
+}
