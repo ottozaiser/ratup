@@ -1,5 +1,5 @@
 //initialize all of our variables
-var src, base, concat, directory, gulp, gutil, hostname, path, refresh, sass, uglify, imagemin, cleanCSS, del, browserSync, autoprefixer, gulpSequence, shell, sourceMaps, plumber, newer;
+var src, base, concat, directory, gulp, gutil, hostname, path, refresh, sass, uglify, imagemin, cleanCSS, del, browserSync, autoprefixer, gulpSequence, shell, sourceMaps, plumber, newer, cache;
 
 var autoPrefixBrowserList = ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'];
 //Path to the theme root
@@ -15,6 +15,7 @@ concat          = require('gulp-concat');
 uglify          = require('gulp-uglify');
 sass            = require('gulp-sass');
 del             = require('del');
+cache           = require('gulp-cached');
 sourceMaps      = require('gulp-sourcemaps');
 imagemin        = require('gulp-imagemin');
 cleanCSS        = require('gulp-clean-css');
@@ -161,6 +162,7 @@ gulp.task('html', function() {
     //watch any and all PHP files and refresh when something changes
     return gulp.src(_app+'/*.html')
     .pipe(plumber())
+    .pipe(cache('achetemele'))
     //where to save our final, compressed css file
     .pipe(gulp.dest(_dist))
     //notify browserSync to refresh
