@@ -93,6 +93,23 @@ small, .font_small {font-size: 0.833em;}
     border-color: $highlightColor;
 }
 
+
+.btn-default{
+    color: $tipo;
+    &:hover,
+    &:focus,
+    &:active{
+        color: $tipo;
+    }
+}
+.btn-default:not(:disabled):not(.disabled):active{
+    color: $tipo;
+}
+
 *::placeholder{
     font-style: italic;
+}
+
+.container-top{
+    padding-top: 10px;
 }

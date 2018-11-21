@@ -1,0 +1,36 @@
+.crear{
+    padding-top: 10px;
+    margin-bottom: 20px; 
+
+    p{
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    fieldset .col-form-label{
+        border-bottom: 1px solid $claro;
+        padding-bottom: 0px;
+        margin-bottom: 4px;
+    }
+
+}
+
+.confirmar{
+    padding-top: 20px;
+    margin-bottom: 20px; 
+    text-align: center;
+
+    .btn{
+        margin-bottom: 10px;
+    }
+
+    .btn-default{
+        margin: 0 auto;
+    }
+
+    
+    
+}
+.aviso-confirmar{
+    margin-bottom: 10px;
+}
