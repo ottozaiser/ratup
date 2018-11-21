@@ -1,9 +1,15 @@
 header.navbar {
     color: $secondaryColor;
     background-color: $primaryColor;
-
+    box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.3);
     .navbar-name{
         font-size: 1.1em;
+    }
+
+    .logo{
+        width: 25px;
+        padding-top: 7px;
+        padding-bottom: 7px;
     }
 
     a.nav-link {

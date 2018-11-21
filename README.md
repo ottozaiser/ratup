@@ -1,4 +1,4 @@
-# Ratup!
+# ratup
 
 ## Requisitos
 Instalar [Node.js]  

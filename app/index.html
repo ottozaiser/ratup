@@ -7,7 +7,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="icon" href="favicon.ico">
-    <title>Ratup!</title>
+    <title>Ratup</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -19,14 +19,15 @@
 </head>
 
 <body class="home">
-    <!-- <header class="navbar fixed-top navbar-expand">
-        <span class="navbar-brand">Ratup!</span>
-    </header> -->
+    <header class="navbar fixed-top navbar-expand">
+        <img src="images/logo.svg" alt="Ratup" class="logo">
+    </header>
 
-    <div class="container-fluid">
+    <div class="container-fluid container-top">
         <div class="row">
             <div class="col">
-                <h1>Ratup!</h1>
+                <h1 class="sr-only">Ratup</h1>
+                <img src="images/isologo.svg" alt="" class="isologo">
                 <p>¿Qué tenés ganas de ver hoy?</p>
                 <div class="buscar">
                     <form action="00_timeline.html">
@@ -42,20 +43,17 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row home-btns">
             <div class="col-6">
-                <p>Si no sabés qué querés ver</p>
-                <a href="00_timeline.html" class="btn btn-primary btn-lg w-100"><i class="fas fa-list-ul"></i>Todos los avisos</a>
+                <!-- <p>Si no sabés qué querés ver</p> -->
+                <a href="00_timeline.html" class="btn btn-primary btn-lg w-100"><i class="fas fa-list-ul"></i> Ver avisos</a>
             </div>
             <div class="col-6">
-                <p>Si tenés entradas y querés compartirla</p>
-                <a href="05_crear.html" class="btn btn-primary btn-lg w-100"><i class="fas fa-plus"></i> Crear un aviso</a>
+                <!-- <p>Si tenés entradas y querés compartirla</p> -->
+                <a href="05_crear.html" class="btn btn-primary btn-lg w-100"><i class="fas fa-plus"></i> Crear aviso</a>
             </div>
         </div>
-
     </div>
-
-
     <nav class="navbar fixed-bottom navbar-expand">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
             aria-expanded="false" aria-label="Toggle navigation">
