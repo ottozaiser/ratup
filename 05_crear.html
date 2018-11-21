@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="favicon.ico">
+    <title>Crear aviso - Ratup!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+
+
+    <link href="css/vendor.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar fixed-top navbar-expand">
+        <a class="nav-link back" href="00_timeline.html"><i class="fas fa-arrow-left"></i> <span class="sr-only">Atrás</span></a>
+        <h1 class="navbar-name w-100">Crear aviso</h1>
+    </header>
+
+    <div class="container crear">
+        <div class="col-12">
+            <p>Todos los campos son obligatorios</p>
+            <form action="06_confirmar.html">
+                <fieldset class="form-group" required>
+                    <legend class="col-form-label w-100">Tipo de aviso</legend>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="aviso-tipo" id="aviso-tipo1" value="gratis"
+                            checked>
+                        <label class="form-check-label" for="aviso-tipo1">
+                            Invitar GRATIS
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="aviso-tipo" id="aviso-tipo2" value="compartir">
+                        <label class="form-check-label" for="aviso-tipo2">
+                            Compartir 2x1
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <label for="selectPelicula">Película</label>
+                    <select class="custom-select" id="selectPelicula" required>
+                        <option selected>Seleccionar...</option>
+                        <option value="0">12 horas para sobrevivir: el inicio</option>
+                        <option value="0">1945</option>
+                        <option value="0">Acusada</option>
+                        <option value="0">Aire</option>
+                        <option value="0">Alfa</option>
+                        <option value="0">All inclusive</option>
+                        <option value="0">Animales en apuros</option>
+                        <option value="0">Animales fantásticos 2</option>
+                        <option value="0">Bohemian Rhapsody</option>
+                        <option value="0">Bohemian Rhapsody SING ALONG</option>
+                        <option value="0">Camino sinuoso</option>
+                        <option value="0">Christopher Robin</option>
+                        <option value="0">Cold War</option>
+                        <option value="0">De despojos y costillas</option>
+                        <option value="0">Dovlatov</option>
+                        <option value="0">El Potro</option>
+                        <option value="0">El amor menos pensado</option>
+                        <option value="0">El cascanueces y los cuatro reinos</option>
+                        <option value="0">El libro de imagen</option>
+                        <option value="0">El origen de la tristeza</option>
+                        <option value="0">El otro verano</option>
+                        <option value="0">El repostero de Berlin</option>
+                        <option value="0">El silencio es un cuerpo que cae</option>
+                        <option value="0">El ángel</option>
+                        <option value="0">Escalofríos 2</option>
+                        <option value="0">Esto no es un golpe</option>
+                        <option value="0">Fátima, el último misterio</option>
+                        <option value="0">Gauguin: viaje a Tahiti</option>
+                        <option value="0">Gonjiam: hospital maldito</option>
+                        <option value="0">Gracias Gauchito</option>
+                        <option value="0">Halloween</option>
+                        <option value="0">Hell Fest: juegos diabólicos</option>
+                        <option value="0">Impuros</option>
+                        <option value="0">Infiltrado del kkklan</option>
+                        <option value="0">Konstruktion Argentina</option>
+                        <option value="0">La casa junto al mar</option>
+                        <option value="0">La esposa</option>
+                        <option value="0">La monja</option>
+                        <option value="0">La noche de 12 años</option>
+                        <option value="0">La número uno</option>
+                        <option value="0">Las hijas del fuego</option>
+                        <option value="0">Los increíbles 2</option>
+                        <option value="0">Lucky</option>
+                        <option value="0">Matar o morir</option>
+                        <option value="0">Mi mejor amigo</option>
+                        <option value="0">Mi obra maestra</option>
+                        <option value="0">Misión imposible 6</option>
+                        <option value="0">Nace una estrella</option>
+                        <option value="0">Operación Overlord</option>
+                        <option value="0">Pablo Escobar: La traición</option>
+                        <option value="0">Pañuelos para la historia</option>
+                        <option value="0">Piazzolla: los años del tiburón</option>
+                        <option value="0">Pie pequeño</option>
+                        <option value="0">Re loca</option>
+                        <option value="0">Rojo</option>
+                        <option value="0">Sangre Blanca</option>
+                        <option value="0">Solo el amor</option>
+                        <option value="0">Somos campeones</option>
+                        <option value="0">Teatro de guerra</option>
+                        <option value="0">Todavía</option>
+                        <option value="0">Transit</option>
+                        <option value="0">Venom</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="selectZona">Zona</label>
+                    <select class="custom-select" id="selectZona" required>
+                        <option selected>Seleccionar...</option>
+                        <option value="0">Abasto</option>
+                        <option value="0">Barrio Norte</option>
+                        <option value="0">Belgrano</option>
+                        <option value="0">Caballito</option>
+                        <option value="0">Centro</option>
+                        <option value="0">Flores</option>
+                        <option value="0">Palermo</option>
+                        <option value="0">Puerto Madero</option>
+                        <option value="0">Villa Devoto</option>
+                        <option value="0">Zona Norte</option>
+                        <option value="0">Zona Oeste</option>
+                        <option value="0">Zona Sur</option> 
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="hora">Horario</label>
+                    <input class="form-control" name="hora" type="time" value="00:00" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje" class="col-form-label w-100">Mensaje del aviso</label>
+                    <textarea class="form-control" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Contá más para recibir más ofertas"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg w-100">Crear</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="js/vendor/font-awesome531.js"></script>
+    <script src="js/vendor/jquery.validate.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
