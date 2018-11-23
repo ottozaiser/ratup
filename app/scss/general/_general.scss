@@ -93,6 +93,22 @@ small, .font_small {font-size: 0.833em;}
     border-color: $highlightColor;
 }
 
+.btn-outline-primary{
+    color: $primaryColorDark;
+    border-color: $primaryColorDark;
+    &:hover,
+    &:focus,
+    &:active{
+        color: $primaryColorDark;
+        background-color: lighten($color: $primaryColorLight, $amount: 20);
+        border-color: $primaryColorDark;
+    }
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active{
+    color: $primaryColorDark;
+    background-color: lighten($color: $primaryColorLight, $amount: 20);
+    border-color: $primaryColorDark;
+}
 
 .btn-default{
     color: $tipo;
