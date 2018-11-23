@@ -1,18 +1,1 @@
-(function ($) {
-
-    $("#toggle-password").on('click', function(event) {
-        event.preventDefault();
-        if($('#pwd').attr("type") == "text"){
-            $('#pwd').attr('type', 'password');
-            $('#toggle-password .toggle-icon').removeClass( "fa-eye-slash" );
-            $('#toggle-password .toggle-icon').addClass( "fa-eye" );            
-        }else if($('#pwd').attr("type") == "password"){
-            $('#pwd').attr('type', 'text');            
-            $('#toggle-password .toggle-icon').addClass( "fa-eye-slash" );
-            $('#toggle-password .toggle-icon').removeClass( "fa-eye" );
-        }
-    });
-
-})(jQuery);
-
-
+!function(e){e("#toggle-password").on("click",function(t){t.preventDefault(),"text"==e("#pwd").attr("type")?(e("#pwd").attr("type","password"),e("#toggle-password .toggle-icon").removeClass("fa-eye-slash"),e("#toggle-password .toggle-icon").addClass("fa-eye")):"password"==e("#pwd").attr("type")&&(e("#pwd").attr("type","text"),e("#toggle-password .toggle-icon").addClass("fa-eye-slash"),e("#toggle-password .toggle-icon").removeClass("fa-eye"))})}(jQuery);
