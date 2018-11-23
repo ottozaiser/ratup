@@ -9,7 +9,7 @@ nav.navbar {
             color: $secondaryColor;
 
             &:hover, &:focus{
-                background-color: darken($color: $primaryColor, $amount: 10);
+                background-color: $primaryColorDark;
             }
             
         }

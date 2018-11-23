@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="favicon.ico">
-    <title>Crear aviso - Ratup</title>
+    <title>Editar aviso - Ratup</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -19,7 +19,7 @@
 <body>
     <header class="navbar fixed-top navbar-expand">
         <a class="nav-link back" href="00_timeline.html"><i class="fas fa-arrow-left"></i> <span class="sr-only">Atrás</span></a>
-        <h1 class="navbar-name w-100">Crear aviso</h1>
+        <h1 class="navbar-name w-100">Editar aviso</h1>
     </header>
     <div class="container-fluid subtitulo">
         <div class="col">
@@ -58,7 +58,8 @@
                         <option value="0">All inclusive</option>
                         <option value="0">Animales en apuros</option>
                         <option value="0">Animales fantásticos 2</option>
-                        <option value="0">Bohemian Rhapsody</option>
+                        <option value="0" selected>Bohemian Rhapsody</option>
+                        <option value="0">Bohemian Rhapsody SING ALONG</option>
                         <option value="0">Camino sinuoso</option>
                         <option value="0">Christopher Robin</option>
                         <option value="0">Cold War</option>
@@ -119,7 +120,7 @@
                         <option value="">Zona</option>
                         <option value="0">Abasto</option>
                         <option value="0">Barrio Norte</option>
-                        <option value="0">Belgrano</option>
+                        <option value="0" selected>Belgrano</option>
                         <option value="0">Caballito</option>
                         <option value="0">Centro</option>
                         <option value="0">Flores</option>
@@ -133,17 +134,18 @@
                 </div>
                 <div class="form-group">
                         <label for="Fecha" class="sr-only">Fecha</label>
-                        <input class="form-control form-control-lg" name="Fecha" type="date" required>
+                        <input class="form-control form-control-lg" name="Fecha" type="date" value="2018-11-27" required>
                     </div>
                 <div class="form-group">
                     <label for="hora" class="sr-only">Horario</label>
-                    <input class="form-control form-control-lg" name="hora" type="time" required>
+                    <input class="form-control form-control-lg" name="hora" type="time" value="19:00" required>
                 </div>
                 <div class="form-group">
                     <label for="mensaje" class="col-form-label w-100 sr-only">Mensaje del aviso</label>
                     <textarea class="form-control form-control-lg" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Contá más para recibir más ofertas"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg w-100">Crear aviso</button>
+                <button type="submit" class="btn btn-primary btn-lg w-100">Modificar aviso</button>
+                <a href="#!" class="btn btn-outline-danger btn-lg w-100 btnBelow">Borrar aviso</a>
             </form>
         </div>
     </div>

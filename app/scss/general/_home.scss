@@ -5,9 +5,9 @@
     }
 
     text-align: center;
-    //background: -webkit-linear-gradient(to right, $gradient, $primaryColor); /* Chrome 10-25, Safari 5.1-6 */
-    //background: linear-gradient(to right, $gradient, $primaryColor); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: $tipo;
+    background: -webkit-linear-gradient(to right, $primaryColorDark, $primaryColor); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $primaryColorDark, $primaryColor); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: $secondaryColor;
     height: 100%;
     margin-top: 30px;
 

@@ -40,7 +40,7 @@ small, .font_small {font-size: 0.833em;}
     height: 70px;
     border-radius: 50%;
     z-index: 1000;
-    background: $primaryColor;
+    background: $highlightColor;
     position: fixed;
     bottom: 75px;
     right: 30px;
@@ -49,11 +49,11 @@ small, .font_small {font-size: 0.833em;}
     border: 0;
 
     &:hover, &:focus{
-        background-color: darken($color: $primaryColor, $amount: 10)
+        background-color: lighten($color: $highlightColor, $amount: 20);
     }
 
     .plus{
-        color: white;
+        color: $tipo;
         position: absolute;
         top: 0;
         display: block;
@@ -83,29 +83,38 @@ small, .font_small {font-size: 0.833em;}
     &:focus,
     &:active{
         color: $tipo;
-        background-color: $secondaryColor;
+        background-color: lighten($color: $highlightColor, $amount: 20);
         border-color: $highlightColor;
     }
 }
 .btn-primary:not(:disabled):not(.disabled):active{
     color: $tipo;
-    background-color: $secondaryColor;
+    background-color: lighten($color: $highlightColor, $amount: 20);
     border-color: $highlightColor;
 }
 
 
 .btn-default{
     color: $tipo;
+    border-color: $primaryColorLight;
     &:hover,
     &:focus,
     &:active{
         color: $tipo;
+        background-color: lighten($color: $primaryColorLight, $amount: 12);
     }
 }
 .btn-default:not(:disabled):not(.disabled):active{
     color: $tipo;
+    border-color: $primaryColorLight;
 }
+.btnBelow{
+    margin-top: 10px;
 
+}
+.btnsBelow{
+    text-align: center;
+}
 *::placeholder{
     font-style: italic;
 }
@@ -115,4 +124,21 @@ small, .font_small {font-size: 0.833em;}
 }
 .container-bottom{
     padding-bottom: 53px;
+}
+
+.subtitulo{
+    color: $secondaryColor;
+    padding: 5px;
+    background-color: $primaryColorDark;
+    p{
+        margin:0;
+        padding: 0;
+        padding-top: 8px;
+        margin-bottom: .5rem;
+        line-height: 1.2;
+    }
+    h2{
+        font-size: 1em;
+        font-weight: normal;
+    }
 }

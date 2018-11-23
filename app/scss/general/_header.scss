@@ -4,6 +4,7 @@ header.navbar {
     box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.3);
     .navbar-name{
         font-size: 1.1em;
+        padding: .6rem 0rem;
     }
 
     .logo{
@@ -17,9 +18,12 @@ header.navbar {
         &:hover,
         &:focus {
             color: $highlightColor;
-        }
+        }      
 
         
+    }
+    a.active{
+        color: $highlightColor;
     }
     a.back{
         padding: .5rem 1rem;

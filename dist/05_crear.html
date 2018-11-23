@@ -21,13 +21,17 @@
         <a class="nav-link back" href="00_timeline.html"><i class="fas fa-arrow-left"></i> <span class="sr-only">Atrás</span></a>
         <h1 class="navbar-name w-100">Crear aviso</h1>
     </header>
-
+    <div class="container-fluid subtitulo">
+        <div class="col">
+            <p>Todos los campos son obligatorios</p>
+        </div>
+    </div>
     <div class="container crear">
         <div class="col-12">
-            <p>Todos los campos son obligatorios</p>
+            
             <form action="06_confirmar.html">
                 <fieldset class="form-group" required>
-                    <legend class="col-form-label w-100">Tipo de aviso</legend>
+                    <legend class="col-form-label w-100 sr-only">Tipo de aviso</legend>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="aviso-tipo" id="aviso-tipo1" value="gratis"
                             checked>
@@ -43,9 +47,9 @@
                     </div>
                 </fieldset>
                 <div class="form-group">
-                    <label for="selectPelicula">Película</label>
-                    <select class="custom-select" id="selectPelicula" required>
-                        <option selected>Seleccionar...</option>
+                    <label for="selectPelicula" class="sr-only">Película</label>
+                    <select class="form-control form-control-lg" id="selectPelicula" required>
+                        <option value="">Película</option>
                         <option value="0">12 horas para sobrevivir: el inicio</option>
                         <option value="0">1945</option>
                         <option value="0">Acusada</option>
@@ -55,7 +59,6 @@
                         <option value="0">Animales en apuros</option>
                         <option value="0">Animales fantásticos 2</option>
                         <option value="0">Bohemian Rhapsody</option>
-                        <option value="0">Bohemian Rhapsody SING ALONG</option>
                         <option value="0">Camino sinuoso</option>
                         <option value="0">Christopher Robin</option>
                         <option value="0">Cold War</option>
@@ -111,9 +114,9 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="selectZona">Zona</label>
-                    <select class="custom-select" id="selectZona" required>
-                        <option selected>Seleccionar...</option>
+                    <label for="selectZona" class="sr-only">Zona</label>
+                    <select class="form-control form-control-lg" id="selectZona" required>
+                        <option value="">Zona</option>
                         <option value="0">Abasto</option>
                         <option value="0">Barrio Norte</option>
                         <option value="0">Belgrano</option>
@@ -129,14 +132,18 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="hora">Horario</label>
-                    <input class="form-control" name="hora" type="time" value="00:00" required>
+                        <label for="Fecha" class="sr-only">Fecha</label>
+                        <input class="form-control form-control-lg" name="Fecha" type="date" required>
+                    </div>
+                <div class="form-group">
+                    <label for="hora" class="sr-only">Horario</label>
+                    <input class="form-control form-control-lg" name="hora" type="time" required>
                 </div>
                 <div class="form-group">
-                    <label for="mensaje" class="col-form-label w-100">Mensaje del aviso</label>
-                    <textarea class="form-control" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Contá más para recibir más ofertas"></textarea>
+                    <label for="mensaje" class="col-form-label w-100 sr-only">Mensaje del aviso</label>
+                    <textarea class="form-control form-control-lg" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Contá más para recibir más ofertas"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg w-100">Crear</button>
+                <button type="submit" class="btn btn-primary btn-lg w-100">Crear aviso</button>
             </form>
         </div>
     </div>

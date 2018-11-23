@@ -1,16 +1,24 @@
 .crear{
     padding-top: 10px;
+    margin-top: 10px; 
     margin-bottom: 20px; 
 
-    p{
-        margin-bottom: 10px;
-        font-weight: bold;
-    }
+    
 
-    fieldset .col-form-label{
-        border-bottom: 1px solid $claro;
-        padding-bottom: 0px;
-        margin-bottom: 4px;
+    // fieldset .col-form-label{
+    //     border-bottom: 1px solid $claro;
+    //     padding-bottom: 0px;
+    //     margin-bottom: 4px;
+    // }
+
+    .form-control-lg {
+        padding: .5rem 1rem;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        border-radius: .3rem;
+    }
+    .form-check-label{
+        font-size: 1.1rem;
     }
 
 }
