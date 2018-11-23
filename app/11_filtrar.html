@@ -4,7 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <title>Filtrar y ordenar - Ratup</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
@@ -22,34 +30,34 @@
         <h1 class="navbar-name w-100">Filtrar y ordenar</h1>
     </header>
     <form action="00_timeline.html">
-    <div class="container-fluid subtitulo">
-        <div class="col">
-            <h2>Ordenar</h2>
-        </div>
-    </div>
-    
-    <div class="container crear">
-        <div class="col-12">
-            <div class="form-group">
-                <label for="selectZona" class="sr-only">Zona</label>
-                <select class="form-control form-control-lg" id="selectZona">
-                    <option value="0">Últimos avisos</option>
-                    <option value="0">Película (orden alfabético A-Z)</option>
-                    <option value="0">Película (orden alfabético Z-A)</option>
-                    <option value="0">Aviso más solicitado</option>
-                    <option value="0">Aviso menos solicitado</option>
-                    <option value="0">Perfil con mejor ranking</option>
-                </select>
+        <div class="container-fluid subtitulo">
+            <div class="col">
+                <h2>Ordenar</h2>
             </div>
         </div>
-    </div>
-    <div class="container-fluid subtitulo">
-        <div class="col">
-            <h2>Filtrar</h2>
+
+        <div class="container crear">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="selectZona" class="sr-only">Zona</label>
+                    <select class="form-control form-control-lg" id="selectZona">
+                        <option value="0">Últimos avisos</option>
+                        <option value="0">Película (orden alfabético A-Z)</option>
+                        <option value="0">Película (orden alfabético Z-A)</option>
+                        <option value="0">Aviso más solicitado</option>
+                        <option value="0">Aviso menos solicitado</option>
+                        <option value="0">Perfil con mejor ranking</option>
+                    </select>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="container crear">
-        <div class="col-12">            
+        <div class="container-fluid subtitulo">
+            <div class="col">
+                <h2>Filtrar</h2>
+            </div>
+        </div>
+        <div class="container crear">
+            <div class="col-12">
                 <fieldset class="form-group">
                     <legend class="col-form-label w-100 sr-only">Tipo de aviso</legend>
                     <div class="form-check form-check-inline">
@@ -159,15 +167,15 @@
                 <div class="form-group">
                     <label for="hora" class="sr-only">Horario</label>
                     <input class="form-control form-control-lg" name="hora" type="time">
-                </div>          
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="container crear">
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-lg w-100">Aplicar</button>        
+        <div class="container crear">
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-lg w-100">Aplicar</button>
+            </div>
         </div>
-    </div>
-</form>
+    </form>
 
 
 
