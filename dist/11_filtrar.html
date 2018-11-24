@@ -4,7 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <title>Filtrar y ordenar - Ratup</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
@@ -20,154 +28,90 @@
     <header class="navbar fixed-top navbar-expand">
         <a class="nav-link back" href="00_timeline.html"><i class="fas fa-arrow-left"></i> <span class="sr-only">Atrás</span></a>
         <h1 class="navbar-name w-100">Filtrar y ordenar</h1>
+        <div class="d-flex w-100 justify-content-end">
+            <a id="borrar" class="nav-link" href="00_timeline.html"><i class="fas fa-trash-alt"></i> <span class="sr-only">Borrar
+                    filtros</span></a>
+        </div>
     </header>
     <form action="00_timeline.html">
-    <div class="container-fluid subtitulo">
-        <div class="col">
-            <h2>Ordenar</h2>
-        </div>
-    </div>
-    
-    <div class="container crear">
-        <div class="col-12">
-            <div class="form-group">
-                <label for="selectZona" class="sr-only">Zona</label>
-                <select class="form-control form-control-lg" id="selectZona">
-                    <option value="0">Últimos avisos</option>
-                    <option value="0">Película (orden alfabético A-Z)</option>
-                    <option value="0">Película (orden alfabético Z-A)</option>
-                    <option value="0">Aviso más solicitado</option>
-                    <option value="0">Aviso menos solicitado</option>
-                    <option value="0">Perfil con mejor ranking</option>
-                </select>
+        <div class="container-fluid subtitulo">
+            <div class="col">
+                <h2>Filtrar</h2>
             </div>
         </div>
-    </div>
-    <div class="container-fluid subtitulo">
-        <div class="col">
-            <h2>Filtrar</h2>
-        </div>
-    </div>
-    <div class="container crear">
-        <div class="col-12">            
-                <fieldset class="form-group">
-                    <legend class="col-form-label w-100 sr-only">Tipo de aviso</legend>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="aviso-tipo" id="aviso-tipo1" value="gratis"
-                            checked>
-                        <label class="form-check-label" for="aviso-tipo1">
-                            entrada GRATIS
-                        </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="aviso-tipo" id="aviso-tipo2" value="compartir">
-                        <label class="form-check-label" for="aviso-tipo2">
-                            Compartir 2x1
-                        </label>
-                    </div>
-                </fieldset>
+        <div class="container filtros">
+            <div class="col-12">
                 <div class="form-group">
-                    <label for="selectPelicula" class="sr-only">Película</label>
-                    <select class="form-control form-control-lg" id="selectPelicula">
-                        <option value="">Película</option>
-                        <option value="0">12 horas para sobrevivir: el inicio</option>
-                        <option value="0">1945</option>
-                        <option value="0">Acusada</option>
-                        <option value="0">Aire</option>
-                        <option value="0">Alfa</option>
-                        <option value="0">All inclusive</option>
-                        <option value="0">Animales en apuros</option>
-                        <option value="0">Animales fantásticos 2</option>
-                        <option value="0">Bohemian Rhapsody</option>
-                        <option value="0">Bohemian Rhapsody SING ALONG</option>
-                        <option value="0">Camino sinuoso</option>
-                        <option value="0">Christopher Robin</option>
-                        <option value="0">Cold War</option>
-                        <option value="0">De despojos y costillas</option>
-                        <option value="0">Dovlatov</option>
-                        <option value="0">El Potro</option>
-                        <option value="0">El amor menos pensado</option>
-                        <option value="0">El cascanueces y los cuatro reinos</option>
-                        <option value="0">El libro de imagen</option>
-                        <option value="0">El origen de la tristeza</option>
-                        <option value="0">El otro verano</option>
-                        <option value="0">El repostero de Berlin</option>
-                        <option value="0">El silencio es un cuerpo que cae</option>
-                        <option value="0">El ángel</option>
-                        <option value="0">Escalofríos 2</option>
-                        <option value="0">Esto no es un golpe</option>
-                        <option value="0">Fátima, el último misterio</option>
-                        <option value="0">Gauguin: viaje a Tahiti</option>
-                        <option value="0">Gonjiam: hospital maldito</option>
-                        <option value="0">Gracias Gauchito</option>
-                        <option value="0">Halloween</option>
-                        <option value="0">Hell Fest: juegos diabólicos</option>
-                        <option value="0">Impuros</option>
-                        <option value="0">Infiltrado del kkklan</option>
-                        <option value="0">Konstruktion Argentina</option>
-                        <option value="0">La casa junto al mar</option>
-                        <option value="0">La esposa</option>
-                        <option value="0">La monja</option>
-                        <option value="0">La noche de 12 años</option>
-                        <option value="0">La número uno</option>
-                        <option value="0">Las hijas del fuego</option>
-                        <option value="0">Los increíbles 2</option>
-                        <option value="0">Lucky</option>
-                        <option value="0">Matar o morir</option>
-                        <option value="0">Mi mejor amigo</option>
-                        <option value="0">Mi obra maestra</option>
-                        <option value="0">Misión imposible 6</option>
-                        <option value="0">Nace una estrella</option>
-                        <option value="0">Operación Overlord</option>
-                        <option value="0">Pablo Escobar: La traición</option>
-                        <option value="0">Pañuelos para la historia</option>
-                        <option value="0">Piazzolla: los años del tiburón</option>
-                        <option value="0">Pie pequeño</option>
-                        <option value="0">Re loca</option>
-                        <option value="0">Rojo</option>
-                        <option value="0">Sangre Blanca</option>
-                        <option value="0">Solo el amor</option>
-                        <option value="0">Somos campeones</option>
-                        <option value="0">Teatro de guerra</option>
-                        <option value="0">Todavía</option>
-                        <option value="0">Transit</option>
-                        <option value="0">Venom</option>
+                    <label for="avisotipo" class="sr-only">Tipo de aviso</label>
+                    <select class="form-control form-control-lg" id="avisotipo" name="avisotipo">
+                        <option value="2">Todas los avisos</option>
+                        <option value="0">Entrada <span class="upp">gratis</span></option>
+                        <option value="1">Compartir 2x1</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="selectZona" class="sr-only">Zona</label>
-                    <select class="form-control form-control-lg" id="selectZona">
-                        <option value="">Zona</option>
+                    <label for="pelicula" class="sr-only">Película</label>
+                    <select class="form-control form-control-lg" id="pelicula" name="pelicula">
+                        <option value="">Todas las película</option>
+                        <option value="8">Bohemian Rhapsody</option>
+                        <option value="47">Nace una estrella</option>
+                        <option value="61">Venom</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="zona" class="sr-only">Zona</label>
+                    <select class="form-control form-control-lg" id="zona" name="zona">
+                        <option value="">Todas las zonas</option>
                         <option value="0">Abasto</option>
-                        <option value="0">Barrio Norte</option>
-                        <option value="0">Belgrano</option>
-                        <option value="0">Caballito</option>
-                        <option value="0">Centro</option>
-                        <option value="0">Flores</option>
-                        <option value="0">Palermo</option>
-                        <option value="0">Puerto Madero</option>
-                        <option value="0">Villa Devoto</option>
-                        <option value="0">Zona Norte</option>
-                        <option value="0">Zona Oeste</option>
-                        <option value="0">Zona Sur</option>
+                        <option value="2">Belgrano</option>
+                        <option value="3">Caballito</option>
+                        <option value="4">Centro</option>
+                        <option value="5">Flores</option>
+                        <option value="8">Villa Devoto</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="Fecha" class="sr-only">Fecha</label>
-                    <input class="form-control form-control-lg" name="Fecha" type="date">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="fecha" class="">Fecha</label>
+                            <input class="form-control form-control-lg" name="fecha" id="fecha" type="date">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="hora" class="">Horario</label>
+                            <input class="form-control form-control-lg" name="hora" id="hora" type="time">
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+        <div class="container-fluid subtitulo">
+            <div class="col">
+                <h2>Ordenar</h2>
+            </div>
+        </div>
+
+        <div class="container crear">
+            <div class="col-12">
                 <div class="form-group">
-                    <label for="hora" class="sr-only">Horario</label>
-                    <input class="form-control form-control-lg" name="hora" type="time">
-                </div>          
+                    <label for="orden" class="sr-only">Ordenar por</label>
+                    <select class="form-control form-control-lg" id="orden" name="orden">
+                        <option value="0">Últimos avisos</option>
+                        <option value="1">Película A-Z</option>
+                        <option value="2">Película Z-A</option>
+                        <option value="3">Aviso más solicitado</option>
+                        <option value="5">Perfil con mejor ranking</option>
+                    </select>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="container crear">
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-lg w-100">Aplicar</button>        
+        <div class="container crear">
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-lg w-100">Aplicar</button>
+            </div>
         </div>
-    </div>
-</form>
+    </form>
 
 
 
@@ -184,6 +128,37 @@
 
     <script src="js/vendor/jquery.validate.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        var orden = getUrlParameter('orden');
+        var avisotipo = getUrlParameter('avisotipo');
+        var pelicula = getUrlParameter('pelicula');
+        var zona = getUrlParameter('zona');
+        var fecha = getUrlParameter('fecha');
+        var hora = getUrlParameter('hora');
+        if (orden == undefined) {
+            $('#borrar').hide()
+        };
+        if (orden != undefined) {
+            $('#orden').val(orden)
+        };
+        if (avisotipo != undefined) {
+            $('#avisotipo').val(avisotipo)
+        };
+        if (pelicula != undefined) {
+            $('#pelicula').val(pelicula)
+        };
+        if (zona != undefined) {
+            $('#zona').val(zona)
+        };
+        if (fecha != undefined) {
+            $('#fecha').val(fecha)
+        };
+        if (hora != undefined) {
+            $('#hora').val(hora.replace('%3A', ':'))
+        };
+    </script>
+
 </body>
 
 </html>

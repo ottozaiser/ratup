@@ -4,7 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <title>¡Aviso creado! - Ratup</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
@@ -28,17 +36,17 @@
             <img src="images/logo-color.svg" alt="Ratup" class="logo">
             <div class="aviso-datos">
                 <p class="copy">Creaste un aviso para ver:</p>
-                <p class="mb-1 movie">Bohemian Rhapsody</p>
+                <p id="pelicula" class="mb-1 movie"></p>
                 <p class="mb-1">
-                    <i class="fas fa-clock"></i> 19hs
-                    <i class="fas fa-calendar-alt"></i> 27/11
-                    <i class="fas fa-map-marker-alt"></i> Belgrano
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor" id="hora"></span>hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec" id="fecha"></span>
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z" id="zona"></span>
                 </p>
             </div>
         </div>
         <div class="col-12">
-            <a href="13_mensajes-aviso-creado.html" class="btn btn-primary btn-lg w-100">Mis entradas ofrecidas</a>
-            <a href="05_crear.html" class="btn btn-default">Editar aviso</a>
+            <a href="13_mensajes-aviso-creado.html" id="misEntradas" class="btn btn-primary btn-lg w-100">Mis entradas ofrecidas</a>
+            <a href="05_crear.html" id="editar" class="btn btn-default">Editar aviso</a>
         </div>
     </div>
 
@@ -54,9 +62,29 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    
+
     <script src="js/vendor/jquery.validate.js"></script>
     <script src="js/main.js"></script>
+    <script>
+            var avisotipo = getUrlParameter('avisotipo');
+            var pelicula = getUrlParameter('pelicula');
+            var zona = getUrlParameter('zona');
+            var fecha = getUrlParameter('fecha');
+            var hora = getUrlParameter('hora');
+            if (pelicula != undefined) {
+                $('#misEntradas').attr('href', '13_mensajes-aviso-creado.html?' + window.location.search.substring(1));
+                $('#editar').attr('href', '05_crear-editar.html?' + window.location.search.substring(1));
+            }else{
+                $('#misEntradas').attr('href', '13_mensajes-aviso-creado.html');
+                $('#editar').attr('href', '05_crear-editar.html');
+            }
+            $('#pelicula').text(peliculasArray[pelicula]);
+            var f = fecha.split('-');
+            var newFecha = f[2] + '/' + f[1];
+            $('#fecha').text(newFecha);
+            $('#hora').text(hora.split(':')[0]);
+            $('#zona').text(zonaArray[zona]);
+        </script>
 </body>
 
 </html>

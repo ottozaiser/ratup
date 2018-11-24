@@ -4,7 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <title>Editar aviso - Ratup</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
@@ -28,124 +36,125 @@
     </div>
     <div class="container crear">
         <div class="col-12">
-            
+
             <form action="06_confirmar.html">
                 <fieldset class="form-group" required>
                     <legend class="col-form-label w-100 sr-only">Tipo de aviso</legend>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="aviso-tipo" id="aviso-tipo1" value="gratis"
+                        <input class="form-check-input" type="radio" name="avisotipo" id="aviso-tipo0" value="0"
                             checked>
-                        <label class="form-check-label" for="aviso-tipo1">
-                            Invitar GRATIS
+                        <label class="form-check-label" for="aviso-tipo0">
+                            Invitar <span class="upp">gratis</span>
                         </label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="aviso-tipo" id="aviso-tipo2" value="compartir">
-                        <label class="form-check-label" for="aviso-tipo2">
+                        <input class="form-check-input" type="radio" name="avisotipo" id="aviso-tipo1" value="1">
+                        <label class="form-check-label" for="aviso-tipo1">
                             Compartir 2x1
                         </label>
                     </div>
                 </fieldset>
                 <div class="form-group">
-                    <label for="selectPelicula" class="sr-only">Película</label>
-                    <select class="form-control form-control-lg" id="selectPelicula" required>
-                        <option value="">Película</option>
-                        <option value="0">12 horas para sobrevivir: el inicio</option>
-                        <option value="0">1945</option>
-                        <option value="0">Acusada</option>
-                        <option value="0">Aire</option>
-                        <option value="0">Alfa</option>
-                        <option value="0">All inclusive</option>
-                        <option value="0">Animales en apuros</option>
-                        <option value="0">Animales fantásticos 2</option>
-                        <option value="0" selected>Bohemian Rhapsody</option>
-                        <option value="0">Bohemian Rhapsody SING ALONG</option>
-                        <option value="0">Camino sinuoso</option>
-                        <option value="0">Christopher Robin</option>
-                        <option value="0">Cold War</option>
-                        <option value="0">De despojos y costillas</option>
-                        <option value="0">Dovlatov</option>
-                        <option value="0">El Potro</option>
-                        <option value="0">El amor menos pensado</option>
-                        <option value="0">El cascanueces y los cuatro reinos</option>
-                        <option value="0">El libro de imagen</option>
-                        <option value="0">El origen de la tristeza</option>
-                        <option value="0">El otro verano</option>
-                        <option value="0">El repostero de Berlin</option>
-                        <option value="0">El silencio es un cuerpo que cae</option>
-                        <option value="0">El ángel</option>
-                        <option value="0">Escalofríos 2</option>
-                        <option value="0">Esto no es un golpe</option>
-                        <option value="0">Fátima, el último misterio</option>
-                        <option value="0">Gauguin: viaje a Tahiti</option>
-                        <option value="0">Gonjiam: hospital maldito</option>
-                        <option value="0">Gracias Gauchito</option>
-                        <option value="0">Halloween</option>
-                        <option value="0">Hell Fest: juegos diabólicos</option>
-                        <option value="0">Impuros</option>
-                        <option value="0">Infiltrado del kkklan</option>
-                        <option value="0">Konstruktion Argentina</option>
-                        <option value="0">La casa junto al mar</option>
-                        <option value="0">La esposa</option>
-                        <option value="0">La monja</option>
-                        <option value="0">La noche de 12 años</option>
-                        <option value="0">La número uno</option>
-                        <option value="0">Las hijas del fuego</option>
-                        <option value="0">Los increíbles 2</option>
-                        <option value="0">Lucky</option>
-                        <option value="0">Matar o morir</option>
-                        <option value="0">Mi mejor amigo</option>
-                        <option value="0">Mi obra maestra</option>
-                        <option value="0">Misión imposible 6</option>
-                        <option value="0">Nace una estrella</option>
-                        <option value="0">Operación Overlord</option>
-                        <option value="0">Pablo Escobar: La traición</option>
-                        <option value="0">Pañuelos para la historia</option>
-                        <option value="0">Piazzolla: los años del tiburón</option>
-                        <option value="0">Pie pequeño</option>
-                        <option value="0">Re loca</option>
-                        <option value="0">Rojo</option>
-                        <option value="0">Sangre Blanca</option>
-                        <option value="0">Solo el amor</option>
-                        <option value="0">Somos campeones</option>
-                        <option value="0">Teatro de guerra</option>
-                        <option value="0">Todavía</option>
-                        <option value="0">Transit</option>
-                        <option value="0">Venom</option>
+                    <label for="pelicula" class="sr-only">Película</label>
+                    <select class="form-control form-control-lg" id="pelicula" name="pelicula" required>
+                            <option value="">Película</option>
+                            <option value="0">12 horas para sobrevivir: el inicio</option>
+                            <option value="1">1945</option>
+                            <option value="2">Acusada</option>
+                            <option value="3">Aire</option>
+                            <option value="4">Alfa</option>
+                            <option value="5">All inclusive</option>
+                            <option value="6">Animales en apuros</option>
+                            <option value="7">Animales fantásticos 2</option>
+                            <option value="8">Bohemian Rhapsody</option>
+                            <option value="9">Bohemian Rhapsody SING ALONG</option>
+                            <option value="10">Camino sinuoso</option>
+                            <option value="11">Christopher Robin</option>
+                            <option value="12">Cold War</option>
+                            <option value="13">De despojos y costillas</option>
+                            <option value="14">Dovlatov</option>
+                            <option value="15">El Potro</option>
+                            <option value="16">El amor menos pensado</option>
+                            <option value="17">El cascanueces y los cuatro reinos</option>
+                            <option value="18">El libro de imagen</option>
+                            <option value="19">El origen de la tristeza</option>
+                            <option value="20">El otro verano</option>
+                            <option value="21">El repostero de Berlin</option>
+                            <option value="22">El silencio es un cuerpo que cae</option>
+                            <option value="23">El ángel</option>
+                            <option value="24">Escalofríos 2</option>
+                            <option value="25">Esto no es un golpe</option>
+                            <option value="26">Fátima, el último misterio</option>
+                            <option value="27">Gauguin: viaje a Tahiti</option>
+                            <option value="28">Gonjiam: hospital maldito</option>
+                            <option value="29">Gracias Gauchito</option>
+                            <option value="30">Halloween</option>
+                            <option value="31">Hell Fest: juegos diabólicos</option>
+                            <option value="32">Impuros</option>
+                            <option value="33">Infiltrado del kkklan</option>
+                            <option value="34">Konstruktion Argentina</option>
+                            <option value="35">La casa junto al mar</option>
+                            <option value="36">La esposa</option>
+                            <option value="37">La monja</option>
+                            <option value="38">La noche de 12 años</option>
+                            <option value="39">La número uno</option>
+                            <option value="40">Las hijas del fuego</option>
+                            <option value="41">Los increíbles 2</option>
+                            <option value="42">Lucky</option>
+                            <option value="43">Matar o morir</option>
+                            <option value="44">Mi mejor amigo</option>
+                            <option value="45">Mi obra maestra</option>
+                            <option value="46">Misión imposible 6</option>
+                            <option value="47">Nace una estrella</option>
+                            <option value="48">Operación Overlord</option>
+                            <option value="49">Pablo Escobar: La traición</option>
+                            <option value="50">Pañuelos para la historia</option>
+                            <option value="51">Piazzolla: los años del tiburón</option>
+                            <option value="52">Pie pequeño</option>
+                            <option value="53">Re loca</option>
+                            <option value="54">Rojo</option>
+                            <option value="55">Sangre Blanca</option>
+                            <option value="56">Solo el amor</option>
+                            <option value="57">Somos campeones</option>
+                            <option value="58">Teatro de guerra</option>
+                            <option value="59">Todavía</option>
+                            <option value="60">Transit</option>
+                            <option value="61">Venom</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="selectZona" class="sr-only">Zona</label>
-                    <select class="form-control form-control-lg" id="selectZona" required>
-                        <option value="">Zona</option>
-                        <option value="0">Abasto</option>
-                        <option value="0">Barrio Norte</option>
-                        <option value="0" selected>Belgrano</option>
-                        <option value="0">Caballito</option>
-                        <option value="0">Centro</option>
-                        <option value="0">Flores</option>
-                        <option value="0">Palermo</option>
-                        <option value="0">Puerto Madero</option>
-                        <option value="0">Villa Devoto</option>
-                        <option value="0">Zona Norte</option>
-                        <option value="0">Zona Oeste</option>
-                        <option value="0">Zona Sur</option> 
+                    <label for="zona" class="sr-only">Zona</label>
+                    <select class="form-control form-control-lg" id="zona" name="zona" required>
+                            <option value="">Zona</option>
+                            <option value="0">Abasto</option>
+                            <option value="1">Barrio Norte</option>
+                            <option value="2">Belgrano</option>
+                            <option value="3">Caballito</option>
+                            <option value="4">Centro</option>
+                            <option value="5">Flores</option>
+                            <option value="6">Palermo</option>
+                            <option value="7">Puerto Madero</option>
+                            <option value="8">Villa Devoto</option>
+                            <option value="9">Zona Norte</option>
+                            <option value="10">Zona Oeste</option>
+                            <option value="11">Zona Sur</option>
                     </select>
                 </div>
                 <div class="form-group">
-                        <label for="Fecha" class="sr-only">Fecha</label>
-                        <input class="form-control form-control-lg" name="Fecha" type="date" value="2018-11-27" required>
-                    </div>
+                    <label for="Fecha" class="sr-only">Fecha</label>
+                    <input class="form-control form-control-lg" name="fecha" id="fecha" type="date" value="2018-11-27" required>
+                </div>
                 <div class="form-group">
                     <label for="hora" class="sr-only">Horario</label>
-                    <input class="form-control form-control-lg" name="hora" type="time" value="19:00" required>
+                    <input class="form-control form-control-lg" name="hora" id="hora" type="time" value="19:00" required>
                 </div>
                 <div class="form-group">
                     <label for="mensaje" class="col-form-label w-100 sr-only">Mensaje del aviso</label>
-                    <textarea class="form-control form-control-lg" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Contá más para recibir más ofertas"></textarea>
+                    <textarea class="form-control form-control-lg" name="mensaje" id="mensaje" cols="30" rows="10"
+                        placeholder="Contá por qué queres ver esta película para recibir más ofertas.." required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg w-100">Modificar aviso</button>
-                <a href="#!" class="btn btn-outline-danger btn-lg w-100 btnBelow">Borrar aviso</a>
+                <a href="00_timeline.html" class="btn btn-outline-danger btn-lg w-100 btnBelow">Borrar aviso</a>
             </form>
         </div>
     </div>
@@ -162,9 +171,23 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    
+
     <script src="js/vendor/jquery.validate.js"></script>
     <script src="js/main.js"></script>
+    <script>
+            var avisotipo = getUrlParameter('avisotipo');
+            var pelicula = getUrlParameter('pelicula');
+            var zona = getUrlParameter('zona');
+            var fecha = getUrlParameter('fecha');
+            var hora = getUrlParameter('hora');
+            var mensaje = getUrlParameter('mensaje');
+            $('#aviso-tipo'+avisotipo).attr('checked',true);
+            $('#pelicula').val(pelicula);
+            $('#fecha').val(fecha);
+            $('#hora').val(hora);
+            $('#zona').val(zona);
+            $('#mensaje').val(mensaje.split('+').join(' '));
+        </script>
 </body>
 
 </html>

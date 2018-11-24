@@ -3,8 +3,8 @@ header.navbar {
     background-color: $primaryColor;
     box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.3);
     .navbar-name{
-        font-size: 1.1em;
-        padding: .6rem 0rem;
+        font-size: 1.2em;
+        padding: .5rem 0rem;
     }
 
     .logo{
@@ -23,7 +23,14 @@ header.navbar {
         
     }
     a.active{
-        color: $highlightColor;
+        background-color: $highlightColor;
+        color: $tipo;
+        border-radius: 40px;
+        &:hover,
+        &:focus {
+            color: $tipo;
+            background-color: $secondaryColor;
+        } 
     }
     a.back{
         padding: .5rem 1rem;

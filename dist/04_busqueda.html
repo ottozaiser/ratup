@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/images/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <title>Avisos - Ratup</title>
+    <title>Resultados de búsqueda - Ratup</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -25,23 +25,26 @@
 </head>
 
 <body>
-    <header class="navbar fixed-top navbar-expand">
-        <!-- <img src="images/logo.svg" alt="Ratup" class="logo"> -->
-        <h1 class="navbar-name w-100">Avisos</h1>
-        <div class="d-flex w-100 justify-content-end">
-            <a id="filtrar" class="nav-link" href="11_filtrar.html"><i class="fas fa-sliders-h"></i> <span class="sr-only">Filtrar
-                    y ordenar</span></a>
-            <a class="nav-link" href="04_buscar.html"><i class="fas fa-search"></i> <span class="sr-only">Buscar</span></a>
-        </div>
+    <header class="navbar fixed-top navbar-expand buscar">
+        <a class="nav-link back" href="00_timeline.html"><i class="fas fa-arrow-left"></i> <span class="sr-only">Atrás</span></a>
+        <h1 class="sr-only">Resultados de búsqueda</h1>
+        <form action="04_busqueda.html">
+            <div class="form-group">
+                <label for="buscar" class="sr-only">Buscar</label>
+                <input type="search" class="form-control ds-input" id="buscar" name="buscar" placeholder="Buscar..."
+                    autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false">
+            </div>
+            <button type="reset" class="reset" id="reset" style="display: none;"><i class="fas fa-times"></i> <span
+                    class="sr-only">Borrar búsqueda</span></button>
+        </form>
     </header>
-
-    <!-- <div class="container-fluid subtitulo">
+    <div class="container-fluid subtitulo">
         <div class="col">
-            <h2><i class="fas fa-arrow-down"></i> Últimos avisos</h2>
+            <h2>Resultados</h2>
         </div>
-    </div> -->
+    </div>
 
-    <div class="list-group timeline end-timeline">
+    <div class="list-group timeline">
         <!-- DUMMY INFO BORRAR DE ACA -->
         <a href="404.html" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100">
@@ -50,12 +53,12 @@
                     <div class="rating">2 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Marcelo <span class="tipo">invita <span class="upp">gratis</span></span></p>
+                    <p>Marcelo invita <span class="upp">gratis</span></p>
                     <p class="mb-1 movie">Venom</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">21</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Abasto</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 21hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Abasto
                     </p>
                 </div>
             </div>
@@ -67,12 +70,12 @@
                     <div class="rating">2 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Daniel <span class="tipo">comparte 2x1</span></p>
+                    <p>Daniel comparte 2x1</p>
                     <p class="mb-1 movie">Venom</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">20</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Belgrano</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 20hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Belgrano
                     </p>
                 </div>
             </div>
@@ -84,12 +87,12 @@
                     <div class="rating">4 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Claudia <span class="tipo">invita <span class="upp">gratis</span></span></p>
+                    <p>Claudia invita <span class="upp">gratis</span></p>
                     <p class="mb-1 movie">Nace una estrella</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">21</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Abasto</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 21hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Abasto
                     </p>
                 </div>
             </div>
@@ -104,12 +107,12 @@
                     <div class="rating">3 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Ricardo <span class="tipo">comparte 2x1</span></p>
+                    <p>Ricardo comparte 2x1</p>
                     <p class="mb-1 movie">Bohemian Rhapsody</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">23</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">28/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Abasto</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 23hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 28/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Abasto
                     </p>
                 </div>
             </div>
@@ -123,13 +126,12 @@
                     <div class="rating">4 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Cristina <span class="tipo">invita <span class="upp">gratis</span></span></p>
+                    <p>Cristina invita <span class="upp">gratis</span></p>
                     <p class="mb-1 movie">Bohemian Rhapsody</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">19</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Villa
-                            Devoto</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 19hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Villa Devoto
                     </p>
                 </div>
             </div>
@@ -141,13 +143,12 @@
                     <div class="rating">4 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Martina <span class="tipo">invita <span class="upp">gratis</span></span></p>
+                    <p>Martina invita <span class="upp">gratis</span></p>
                     <p class="mb-1 movie">Nace una estrella</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">21</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Villa
-                            Devoto</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 21hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Villa Devoto
                     </p>
                 </div>
             </div>
@@ -159,12 +160,12 @@
                     <div class="rating">4 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Romina <span class="tipo">invita <span class="upp">gratis</span></span></p>
+                    <p>Romina invita <span class="upp">gratis</span></p>
                     <p class="mb-1 movie">Nace una estrella</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">21</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Abasto</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 21hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Abasto
                     </p>
                 </div>
             </div>
@@ -176,12 +177,12 @@
                     <div class="rating">2 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>José <span class="tipo">comparte 2x1</span></p>
+                    <p>José comparte 2x1</p>
                     <p class="mb-1 movie">Venom</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">20</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Belgrano</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 20hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Belgrano
                     </p>
                 </div>
             </div>
@@ -193,12 +194,12 @@
                     <div class="rating">5 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Raúl <span class="tipo">invita <span class="upp">gratis</span></span></p>
+                    <p>Raúl invita <span class="upp">gratis</span></p>
                     <p class="mb-1 movie">Bohemian Rhapsody</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">19</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">26/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Belgrano</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 19hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 26/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Belgrano
                     </p>
                 </div>
             </div>
@@ -212,12 +213,12 @@
                     <div class="rating">5 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Julia <span class="tipo">comparte 2x1</span></p>
+                    <p>Julia comparte 2x1</p>
                     <p class="mb-1 movie">Bohemian Rhapsody</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">19</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Belgrano</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 19hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Belgrano
                     </p>
                 </div>
             </div>
@@ -229,12 +230,12 @@
                     <div class="rating">3 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Martín <span class="tipo">invita <span class="upp">gratis</span></span></p>
+                    <p>Martín invita <span class="upp">gratis</span></p>
                     <p class="mb-1 movie">Bohemian Rhapsody</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">18</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">23/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Caballito</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 18hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 23/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Caballito
                     </p>
                 </div>
             </div>
@@ -246,12 +247,12 @@
                     <div class="rating">2 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Roberto <span class="tipo">comparte 2x1</span></p>
+                    <p>Roberto comparte 2x1</p>
                     <p class="mb-1 movie">Venom</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">20</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Belgrano</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 20hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Belgrano
                     </p>
                 </div>
             </div>
@@ -263,12 +264,12 @@
                     <div class="rating">5 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Marcos <span class="tipo">comparte 2x1</span></p>
+                    <p>Marcos comparte 2x1</p>
                     <p class="mb-1 movie">Venom</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">20</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Belgrano</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 20hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Belgrano
                     </p>
                 </div>
             </div>
@@ -280,12 +281,12 @@
                     <div class="rating">2 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Mariano <span class="tipo">comparte 2x1</span></p>
+                    <p>Mariano comparte 2x1</p>
                     <p class="mb-1 movie">Venom</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">20</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Centro</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 20hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Centro
                     </p>
                 </div>
             </div>
@@ -297,12 +298,12 @@
                     <div class="rating">3 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Axel <span class="tipo">invita <span class="upp">gratis</span></span></p>
+                    <p>Axel invita <span class="upp">gratis</span></p>
                     <p class="mb-1 movie">Bohemian Rhapsody</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">19</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Caballito</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 19hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Caballito
                     </p>
                 </div>
             </div>
@@ -314,12 +315,12 @@
                     <div class="rating">4 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Fernanda <span class="tipo">invita <span class="upp">gratis</span></span></p>
+                    <p>Fernanda invita <span class="upp">gratis</span></p>
                     <p class="mb-1 movie">Nace una estrella</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">21</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Abasto</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 21hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Abasto
                     </p>
                 </div>
             </div>
@@ -331,12 +332,12 @@
                     <div class="rating">4 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Federico <span class="tipo">invita <span class="upp">gratis</span></span></p>
+                    <p>Federico invita <span class="upp">gratis</span></p>
                     <p class="mb-1 movie">Bohemian Rhapsody</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">19</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Belgrano</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 19hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Belgrano
                     </p>
                 </div>
             </div>
@@ -349,12 +350,12 @@
                     <div class="rating">5 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Malena <span class="tipo">invita <span class="upp">gratis</span></span></p>
+                    <p>Malena invita <span class="upp">gratis</span></p>
                     <p class="mb-1 movie">Bohemian Rhapsody</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">19</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">30/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Centro</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 19hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 30/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Centro
                     </p>
                 </div>
             </div>
@@ -367,12 +368,12 @@
                     <div class="rating">3 <span class="sr-only">de 5 estrellas</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Alfio <span class="tipo">comparte 2x1</span></p>
+                    <p>Alfio comparte 2x1</p>
                     <p class="mb-1 movie">Bohemian Rhapsody</p>
                     <p class="mb-1">
-                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">19</span>hs
-                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">24/11</span>
-                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Flores</span>
+                        <i class="fas fa-clock"></i><span class="sr-only">Horario:</span> 19hs
+                        <i class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 24/11
+                        <i class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Flores
                     </p>
                 </div>
             </div>
@@ -384,33 +385,6 @@
 
 
 
-    <a href="05_crear.html" id="floating-button">
-        <span class="plus">+<span class="sr-only">Agregar aviso</span></span>
-    </a>
-    <nav class="navbar fixed-bottom navbar-expand">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav nav-fill w-100">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html"><i class="fas fa-home"></i> <span class="sr-only">Inicio</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="00_timeline.html"><i class="fas fa-list-ul"></i> <span class="sr-only">Avisos
-                            (actual)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="12_mensajes-vacio.html"><i class="fas fa-ticket-alt"></i> <span class="sr-only">Entradas</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="07_me.html"><i class="fas fa-user"></i> <span class="sr-only">Perfil</span></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -418,98 +392,42 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+
     <script src="js/vendor/jquery.validate.js"></script>
     <script src="js/main.js"></script>
     <script>
-        var orden = getUrlParameter('orden');
-        var avisotipo = getUrlParameter('avisotipo');
-        var pelicula = getUrlParameter('pelicula');
-        var zona = getUrlParameter('zona');
-        var fecha = getUrlParameter('fecha');
-        var hora = getUrlParameter('hora');
-        if (orden != undefined) {
-            $('#filtrar').addClass('active');
-            $('#filtrar').attr('href', '11_filtrar.html?' + window.location.search.substring(1));
-            //$('.subtitulo h2').html('<i class="fas fa-arrow-down"></i> ' + ordenArray[orden]);
+        $('.list-group-item').hide();
+        $('#buscar').on('input', function () {
+            if ($('#buscar').val() != '') {
+                $('#reset').show();
+            } else {
+                $('#reset').hide();
+            }
+        });
+        $('#reset').on('click', function () {
+            $('.list-group-item').hide();
+            $('#reset').hide();
+        });
 
+        var busqueda = getUrlParameter('buscar');
+        if (busqueda != '') {
+            $('#buscar').val(busqueda.replace('+', ' '));
+            $('#reset').show();
+
+            busqueda = busqueda.toUpperCase();
+            busqueda = busqueda.split('+');
+            //console.log(busqueda);
+            
             $('.list-group-item').each(function () {
-                var movieTipo = $(this).find('.tipo').text();
-                var movieTitle = $(this).find('.movie').text();
-                var movieZona = $(this).find('.z').text();
-                var movieFecha = $(this).find('.fec').text();
-                var movieHora = $(this).find('.hor').text();
-
-                //console.log(checkPeli(movieTitle)+'>>>>>>>>' + (pelicula == '' ));
-                if (checkTipo(movieTipo) && checkPeli(movieTitle) && checkZona(movieZona) && checkFecha(movieFecha)) {
+                var movieTitle = $(this).find( '.movie' ).text().toUpperCase().split(' ');
+                var common = $.grep(busqueda, function(element) {
+                    return $.inArray(element, movieTitle ) !== -1;
+                });
+                //console.log(movieTitle);
+                if(common.length != 0) { 
                     $(this).show();
-                } else {
-                    $(this).hide();
-                }
+                };                
             });
-        } else {
-            $('#filtrar').removeClass('active');
-            $('#filtrar').attr('href', '11_filtrar.html');
-
-        }
-        
-        function checkTipo(ttipo) {
-            var num;
-            if (avisotipo != '') {
-                if (ttipo == 'invita gratis'){
-                    num = '0';
-                }else if(ttipo == 'comparte 2x1'){
-                    num = '1';
-                }
-                
-                if (avisotipo == num || avisotipo == 2) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {
-                return true;
-            }
-        }
-
-        function checkPeli(ppelicula) {
-            if (pelicula != '') {
-                if (ppelicula == peliculasArray[pelicula]) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {
-                return true;
-            }
-        }
-
-        function checkZona(zzona) {
-            if (zona != '') {
-                var zon = zonaArray[zona];
-
-                if (zon == zzona) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {              
-                
-                return true;
-            }
-        }
-
-        function checkFecha(ffecha) {
-            if (fecha != '') {
-                var f = fecha.split('-')
-                var newFecha = f[2]+'/'+f[1];
-                if (newFecha == ffecha) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {
-                return true;
-            }
         }
     </script>
 </body>
