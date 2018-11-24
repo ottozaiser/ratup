@@ -169,6 +169,17 @@ gulp.task('html', function() {
     .pipe(browserSync.reload({stream: true}));
 });
 
+//basically just keeping an eye on all PHP files
+gulp.task('html-deploy', function() {
+    //watch any and all PHP files and refresh when something changes
+    return gulp.src(_app+'/*.html')
+    .pipe(plumber())
+    //where to save our final, compressed css file
+    .pipe(gulp.dest(_dist))
+    //notify browserSync to refresh
+    .pipe(browserSync.reload({stream: true}));
+});
+
 //compiling our SCSS files for deployment
 gulp.task('styles-deploy', function() {
     //the initializer / master SCSS file, which will just be a file that imports everything
@@ -267,6 +278,6 @@ gulp.task('watchcss', ['browserSync', 'styles', 'php'], function() {
 });
 
 //this is our deployment task, it will set everything for deployment-ready files
-gulp.task('deploy', gulpSequence('clean', 'scaffold', ['scripts-deploy', 'vendor-scripts', 'styles-deploy', 'vendor-styles-deploy', 'images-deploy']));
+gulp.task('deploy', gulpSequence('clean', 'scaffold', ['scripts-deploy', 'vendor-scripts', 'html-deploy', 'styles-deploy', 'vendor-styles-deploy', 'images-deploy']));
 //this is our deployment task, it will set everything for deployment-ready files
-gulp.task('deploycss', gulpSequence('cleancss', 'styles-deploy'));
+gulp.task('deploycss', gulpSequence('cleancss', 'styles-deploy', 'html-deploy'));
