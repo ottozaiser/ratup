@@ -324,23 +324,6 @@
                 </div>
             </div>
         </a>
-        <a href="01_profile.html" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100">
-                <div class="perfil">
-                    <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="Federico">
-                    <div class="rating">4 <span class="sr-only">de 5 estrellas</span></div>
-                </div>
-                <div class="aviso-timeline">
-                    <p>Federico <span class="tipo">invita <span class="upp">gratis</span></span></p>
-                    <p class="mb-1 movie">Bohemian Rhapsody</p>
-                    <p class="mb-1">
-                        <i aria-hidden="true" class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor">19</span>hs
-                        <i aria-hidden="true" class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec">27/11</span>
-                        <i aria-hidden="true" class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> <span class="z">Belgrano</span>
-                    </p>
-                </div>
-            </div>
-        </a>
 
         <a href="404.html" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100">
@@ -402,7 +385,9 @@
                             (actual)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="12_mensajes-vacio.html"><i aria-hidden="true" class="fas fa-ticket-alt"></i> <span class="sr-only">Entradas</span></a>
+                    <a class="nav-link" href="14_mensajes-aviso-ofertado.html?mensaje=1"><i aria-hidden="true" class="fas fa-ticket-alt"></i> <span class="sr-only">Entradas</span>
+                        <div class="notificacion" style="display: none;">1 <span class="sr-only">notificación</span></div>   
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="07_me.html"><i aria-hidden="true" class="fas fa-user"></i> <span class="sr-only">Perfil</span></a>
@@ -512,6 +497,16 @@
             }
         }
     </script>
+    <script>
+            $(document).ready(function () {
+                setTimeout(cambiarEstado, 2000);
+    
+            });
+    
+            function cambiarEstado(){
+                $('.notificacion').show();
+            }
+        </script>
 </body>
 
 </html>

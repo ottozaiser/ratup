@@ -26,37 +26,38 @@
 
 <body>
     <header class="navbar fixed-top navbar-expand">
-        <a class="nav-link back" href="00_timeline.html"><i class="fas fa-arrow-left"></i> <span class="sr-only">Atrás</span></a>
+        <a class="nav-link back" href="00_timeline.html"><i aria-hidden="true" class="fas fa-arrow-left"></i> <span class="sr-only">Atrás</span></a>
         <h1 class="navbar-name w-100">Editar aviso</h1>
     </header>
-    <div class="container-fluid subtitulo">
-        <div class="col">
-            <p>Todos los campos son obligatorios</p>
+    <main>
+        <div class="container-fluid subtitulo">
+            <div class="col">
+                <p>Todos los campos son obligatorios</p>
+            </div>
         </div>
-    </div>
-    <div class="container crear">
-        <div class="col-12">
+        <div class="container crear">
+            <div class="col-12">
 
-            <form action="06_confirmar.html">
-                <fieldset class="form-group" required>
-                    <legend class="col-form-label w-100 sr-only">Tipo de aviso</legend>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="avisotipo" id="aviso-tipo0" value="0"
-                            checked>
-                        <label class="form-check-label" for="aviso-tipo0">
-                            Invitar <span class="upp">gratis</span>
-                        </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="avisotipo" id="aviso-tipo1" value="1">
-                        <label class="form-check-label" for="aviso-tipo1">
-                            Compartir 2x1
-                        </label>
-                    </div>
-                </fieldset>
-                <div class="form-group">
-                    <label for="pelicula" class="sr-only">Película</label>
-                    <select class="form-control form-control-lg" id="pelicula" name="pelicula" required>
+                <form action="06_confirmar.html">
+                    <fieldset class="form-group" required>
+                        <legend class="col-form-label w-100 sr-only">Tipo de aviso</legend>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="avisotipo" id="aviso-tipo0" value="0"
+                                checked>
+                            <label class="form-check-label" for="aviso-tipo0">
+                                Invitar <span class="upp">gratis</span>
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="avisotipo" id="aviso-tipo1" value="1">
+                            <label class="form-check-label" for="aviso-tipo1">
+                                Compartir 2x1
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="pelicula" class="sr-only">Película</label>
+                        <select class="form-control form-control-lg" id="pelicula" name="pelicula" required>
                             <option value="">Película</option>
                             <option value="0">12 horas para sobrevivir: el inicio</option>
                             <option value="1">1945</option>
@@ -120,11 +121,11 @@
                             <option value="59">Todavía</option>
                             <option value="60">Transit</option>
                             <option value="61">Venom</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="zona" class="sr-only">Zona</label>
-                    <select class="form-control form-control-lg" id="zona" name="zona" required>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="zona" class="sr-only">Zona</label>
+                        <select class="form-control form-control-lg" id="zona" name="zona" required>
                             <option value="">Zona</option>
                             <option value="0">Abasto</option>
                             <option value="1">Barrio Norte</option>
@@ -138,27 +139,29 @@
                             <option value="9">Zona Norte</option>
                             <option value="10">Zona Oeste</option>
                             <option value="11">Zona Sur</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="Fecha" class="sr-only">Fecha</label>
-                    <input class="form-control form-control-lg" name="fecha" id="fecha" type="date" value="2018-11-27" required>
-                </div>
-                <div class="form-group">
-                    <label for="hora" class="sr-only">Horario</label>
-                    <input class="form-control form-control-lg" name="hora" id="hora" type="time" value="19:00" required>
-                </div>
-                <div class="form-group">
-                    <label for="mensaje" class="col-form-label w-100 sr-only">Mensaje del aviso</label>
-                    <textarea class="form-control form-control-lg" name="mensaje" id="mensaje" cols="30" rows="10"
-                        placeholder="Contá por qué queres ver esta película para recibir más ofertas.." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg w-100">Modificar aviso</button>
-                <a href="00_timeline.html" class="btn btn-outline-danger btn-lg w-100 btnBelow">Borrar aviso</a>
-            </form>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Fecha" class="sr-only">Fecha</label>
+                        <input class="form-control form-control-lg" name="fecha" id="fecha" type="date" value="2018-11-27"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora" class="sr-only">Horario</label>
+                        <input class="form-control form-control-lg" name="hora" id="hora" type="time" value="19:00"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje" class="col-form-label w-100 sr-only">Mensaje del aviso</label>
+                        <textarea class="form-control form-control-lg" name="mensaje" id="mensaje" cols="30" rows="10"
+                            placeholder="Contá por qué queres ver esta película para recibir más ofertas.." required></textarea>
+                    </div>
+                    <button id="modificar" type="submit" class="btn btn-primary btn-lg w-100">Modificar aviso</button>
+                    <a href="00_timeline.html" class="btn btn-outline-danger btn-lg w-100 btnBelow">Borrar aviso</a>
+                </form>
+            </div>
         </div>
-    </div>
-
+    </main>
 
 
 
@@ -175,19 +178,41 @@
     <script src="js/vendor/jquery.validate.js"></script>
     <script src="js/main.js"></script>
     <script>
-            var avisotipo = getUrlParameter('avisotipo');
-            var pelicula = getUrlParameter('pelicula');
-            var zona = getUrlParameter('zona');
-            var fecha = getUrlParameter('fecha');
-            var hora = getUrlParameter('hora');
-            var mensaje = getUrlParameter('mensaje');
-            $('#aviso-tipo'+avisotipo).attr('checked',true);
-            $('#pelicula').val(pelicula);
-            $('#fecha').val(fecha);
-            $('#hora').val(hora);
-            $('#zona').val(zona);
-            $('#mensaje').val(mensaje.split('+').join(' '));
-        </script>
+        var avisotipo = getUrlParameter('avisotipo');
+        var pelicula = getUrlParameter('pelicula');
+        var zona = getUrlParameter('zona');
+        var fecha = getUrlParameter('fecha');
+        var hora = getUrlParameter('hora');
+        var mensaje = getUrlParameter('mensaje');
+        $('#aviso-tipo' + avisotipo).attr('checked', true);
+        $('#pelicula').val(pelicula);
+        $('#fecha').val(fecha);
+        $('#hora').val(hora);
+        $('#zona').val(zona);
+        $('#mensaje').val(mensaje.split('+').join(' '));
+    </script>
+    <script>
+        $(document).ready(function () {
+            validate();
+            $('#aviso-tipo0, #aviso-tipo1, #pelicula, #zona, #fecha, #hora, #mensaje').change(validate);
+        });
+
+        function validate() {
+
+            if (
+
+                ($('#aviso-tipo0').is(':checked') || $('#aviso-tipo1').is(':checked')) &&
+                $('#pelicula').val() != '' &&
+                $('#zona').val() != '' &&
+                $('#fecha').val() != '' &&
+                $('#hora').val() != '' &&
+                $('#mensaje').val().length > 0) {
+                $('#modificar').prop("disabled", false);
+            } else {
+                $('#modificar').prop("disabled", true);
+            }
+        }
+    </script>
 </body>
 
 </html>
