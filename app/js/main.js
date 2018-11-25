@@ -31,6 +31,22 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 
+function expandTextarea(id) {
+    document.getElementById(id).addEventListener('keyup', function () {
+        this.style.overflow = 'hidden';
+        this.style.height = 0;
+        this.style.height = this.scrollHeight + 'px';
+    }, false);
+}
+
+function resetTextarea(id) {
+    document.getElementById(id).style.overflow = 'hidden';
+    document.getElementById(id).style.height = 0;
+    document.getElementById(id).style.height = '36px';
+}
+
+
+
 var ordenArray = 
 [
     'Últimos avisos',

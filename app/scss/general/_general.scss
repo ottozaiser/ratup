@@ -93,6 +93,12 @@ small, .font_small {font-size: 0.833em;}
     border-color: $highlightColor;
 }
 
+.btn-primary.disabled, .btn-primary:disabled {
+    color: $tipo;
+    background-color: $highlightColor;
+    border-color: $highlightColor;
+}
+
 .btn-outline-primary{
     color: $primaryColorDark;
     border-color: $primaryColorDark;
