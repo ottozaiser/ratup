@@ -179,6 +179,7 @@
         $(document).ready(function () {
             validate();
             $('#aviso-tipo1, #aviso-tipo2, #pelicula, #zona, #fecha, #hora, #mensaje').change(validate);
+            $('#mensaje').keyup(validate);
         });
 
         function validate() {
