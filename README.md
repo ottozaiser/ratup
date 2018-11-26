@@ -1,9 +1,10 @@
-# ratup
-
+# Ratup
+[Demo]  
 ## Requisitos
 Instalar [Node.js]  
 Instalar dependencias: 
   ```sh
+  sudo npm install gulp-cli -g
   npm install
   ```
 ## Carpetas
@@ -23,4 +24,5 @@ Para compilar, minimizar y optimizar archivos:
   gulp deploy
   ```
 
+[Demo]: https://ottozaiser.github.io/ratup/
 [Node.js]: https://nodejs.org/en/
