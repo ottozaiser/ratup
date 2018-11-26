@@ -43,5 +43,11 @@ header.navbar {
         margin: 0;
         padding: 0;
     }
-
+    .dropdown-menu{
+        left: auto;
+        top: 90%;
+        .dropdown-item{
+            padding: .6rem 1.5rem;
+        }
+    }
 }
