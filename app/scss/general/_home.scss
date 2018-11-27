@@ -1,5 +1,5 @@
 .home{
-
+    
     .container-top{
         margin-top: 50px;
     }
@@ -9,7 +9,7 @@
     background: linear-gradient(to right, $primaryColorDark, $primaryColor); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: $secondaryColor;
     height: 100%;
-    margin-top: 30px;
+    margin-top: 0px;
 
     img.isologo{
         width: 140px;
@@ -35,6 +35,7 @@
     }
     .home-btns{
         margin-top: 10px;
+        
     }
     .home-btns .col-6:first-child{
        padding-right: 5px;
@@ -48,5 +49,12 @@
         font-size: 1.2em;
         padding-top: 15px;
         padding-bottom: 15px;
+        @media only screen and (max-width: 342px) {
+            font-size: 1em;
+        }
+    }
+    .full-height{
+        width: 100vw;
+        height: 100vh;
     }
 }

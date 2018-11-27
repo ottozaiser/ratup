@@ -24,6 +24,7 @@ header.chat{
         margin: 0;
     }
     textarea{
+        height: 38px;
     }
 }
 .chatmargin{
@@ -108,7 +109,7 @@ header.chat{
     .yo:before {
         border-color: rgba(189, 189, 189, 0);
         border-left-color: $claro;
-        border-width: 11px;
-        margin-top: -11px;
+        border-width: 10px;
+        margin-top: -10px;
     }
 }
