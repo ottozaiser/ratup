@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es_AR">
+<html lang="es-AR">
 
 <head>
     <meta charset="utf-8">
@@ -27,7 +27,7 @@
 <body>
     <header class="navbar fixed-top navbar-expand">
         <a class="nav-link back" href="00_timeline.html"><i aria-hidden="true" class="fas fa-arrow-left"></i> <span class="sr-only">Atrás</span></a>
-        <h1 class="navbar-name w-100">Editar aviso</h1>
+        <h1 class="navbar-name w-100 w-back">Editar aviso</h1>
     </header>
     <main>
         <div class="container-fluid subtitulo">
@@ -39,11 +39,11 @@
             <div class="col-12">
 
                 <form action="06_confirmar.html">
-                    <fieldset class="form-group" required>
+                    <fieldset class="form-group">
                         <legend class="col-form-label w-100 sr-only">Tipo de aviso</legend>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="avisotipo" id="aviso-tipo0" value="0"
-                                checked>
+                             required>
                             <label class="form-check-label" for="aviso-tipo0">
                                 Invitar <span class="upp">gratis</span>
                             </label>
