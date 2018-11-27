@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es_AR">
+<html lang="es-AR">
 
 <head>
     <meta charset="utf-8">
@@ -30,7 +30,7 @@
         <h1 class="navbar-name w-100">Avisos</h1>
         <div class="d-flex w-100 justify-content-end">
             <a id="filtrar" class="nav-link" href="11_filtrar.html"><i aria-hidden="true" class="fas fa-sliders-h"></i> <span class="sr-only">Filtrar
-                    y ordenar</span></a>
+                    y ordenar</span> <span class="filtroAp sr-only">aplicados</span></a>
             <a class="nav-link" href="04_buscar.html"><i aria-hidden="true" class="fas fa-search"></i> <span class="sr-only">Buscar</span></a>
         </div>
     </header>
@@ -385,13 +385,9 @@
 
 
     <a href="05_crear.html" id="floating-button">
-        <span class="plus">+<span class="sr-only">Agregar aviso</span></span>
+        <span class="plus"><span aria-hidden="true">+</span><span class="sr-only">Agregar aviso</span></span>
     </a>
     <nav class="navbar fixed-bottom navbar-expand">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav nav-fill w-100">
                 <li class="nav-item">
@@ -428,6 +424,7 @@
         var hora = getUrlParameter('hora');
         if (orden != undefined) {
             $('#filtrar').addClass('active');
+            $('.filtroAp').show();
             $('#filtrar').attr('href', '11_filtrar.html?' + window.location.search.substring(1));
             //$('.subtitulo h2').html('<i aria-hidden="true" class="fas fa-arrow-down"></i> ' + ordenArray[orden]);
 
@@ -448,6 +445,7 @@
         } else {
             $('#filtrar').removeClass('active');
             $('#filtrar').attr('href', '11_filtrar.html');
+            $('.filtroAp').hide();
 
         }
         

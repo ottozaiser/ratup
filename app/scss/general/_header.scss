@@ -2,11 +2,14 @@ header.navbar {
     color: $secondaryColor;
     background-color: $primaryColor;
     box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.3);
+    padding: 0;
     .navbar-name{
         font-size: 1.2em;
-        padding: .5rem 0rem;
+        padding: 1.2rem;
     }
-
+    .w-back{
+        padding-left: 0px;
+    }
     .logo{
         width: 25px;
         padding-top: 7px;
@@ -15,6 +18,9 @@ header.navbar {
 
     a.nav-link {
         color: $secondaryColor;
+        font-size: 1.25em;
+        padding: 1rem;
+        min-width: 48px;
         &:hover,
         &:focus {
             color: $highlightColor;
@@ -33,9 +39,8 @@ header.navbar {
         } 
     }
     a.back{
-        padding: .5rem 1rem;
-        padding-left: 0.5rem;
-        padding-right: 1.5rem;
+        padding: 1rem;
+        padding-right: 1.2rem;
     }
 
     h1{
@@ -49,5 +54,8 @@ header.navbar {
         .dropdown-item{
             padding: .6rem 1.5rem;
         }
+    }
+    .dropdown-item:active {
+        background-color: $primaryColor;
     }
 }
