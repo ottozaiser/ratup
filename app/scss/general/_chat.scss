@@ -31,7 +31,12 @@ header.chat{
 }
 .chat-body{
     padding: 20px;
-    
+    padding-top: 0px;
+    ol{
+        list-style: none;
+        margin: 0;
+        padding: 0; padding: 0;
+        }
     .mensaje{
         margin-top: 10px;
         margin-bottom: 10px;
