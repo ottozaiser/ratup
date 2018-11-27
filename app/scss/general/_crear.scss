@@ -28,13 +28,17 @@
     margin-bottom: 20px; 
     text-align: center;
     
-    
+        color: #721c24;
 }
 .aviso-confirmar{
     margin-bottom: 10px;
 }
 
-
+.alert{
+    a {
+        color: #721c24;
+    }
+}
 
 .creado{
     padding-top: 40px;
