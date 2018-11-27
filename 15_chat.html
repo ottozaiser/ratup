@@ -35,10 +35,10 @@
 
     <main class="chatmargin">
 
-        <div id="chat" role="log" aria-live="polite" class="chat-body">
-            <div class="mensaje otro">
-                <p>Hola soy Federico! Como va?</p>
-            </div>
+        <div id="chat" role="log" class="chat-body">
+            <ol id="chatRegion" aria-live="assertive" aria-atomic="false">
+                <li class="mensaje otro">Hola soy Federico! Como va?</li>
+            </ul>
         </div>
         <div style="clear: both;"></div>
 
@@ -47,8 +47,7 @@
         <div class="navbar fixed-bottom navbar-expand chat-bottom">
             <form action="" class="w-100 d-flex">
                 <label for="mensaje" class="sr-only">Mensaje del aviso</label>
-                <textarea class="form-control mr-2" name="mensaje" id="mensaje" rows="1" placeholder="Escribí un mensaje..."
-                    required></textarea>
+                <textarea class="form-control mr-2" name="mensaje" id="mensaje" rows="1" placeholder="Escribí un mensaje..."></textarea>
                 <button id="enviar" type="submit" class="btn btn-primary"><i aria-hidden="true" class="fas fa-paper-plane"></i><span class="sr-only">Enviar
                         mensaje</span></button>
             </form>
@@ -66,10 +65,10 @@
     <script>
         expandTextarea('mensaje');
         var numResponse = 0;
-        var intro = '<div class="mensaje yo"><p>';
-        var outro = '</p></div>';
-        var otroIn = '<div class="mensaje otro"><p>';
-        var otroOut = '</p></div>';
+        var intro = '<li class="mensaje yo">';
+        var outro = '</li>';
+        var otroIn = '<li class="mensaje otro">';
+        var otroOut = '</li>';
         var otroMensajes = [
             'Yo ando muy bien! Me encantó tu mensaje. Nos encontramos el 27 en el cine y ahí arreglamos. Te parece?',
             'Genial. Vamos hablando! Saludos',
@@ -83,7 +82,7 @@
             if (numResponse < otroMensajes.length - 1) {
                 numResponse++
             };
-            $('#chat').append(otroIn + msg + otroOut);
+            $('#chatRegion').append(otroIn + msg + otroOut);
             $('html, body').scrollTop($(document).height());
         }
 
@@ -94,7 +93,7 @@
                 var msg = $('#mensaje').val();
                 if (msg != '') {
                     $('#mensaje').val('');
-                    $('#chat').append(intro + msg + outro);
+                    $('#chatRegion').append(intro + msg + outro);
                     setTimeout(responder, 2000);
                     resetTextarea('mensaje');
                 }
