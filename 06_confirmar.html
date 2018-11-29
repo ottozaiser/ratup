@@ -42,8 +42,8 @@
                     <div class="rating"><span aria-hidden="true">-</span><span class="sr-only">Sin calificación</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Vos <span id="avisotipo"></span></p>
                     <p id="pelicula" class="mb-1 movie"></p>
+                    <p>Vos <span id="avisotipo"></span></p>
                     <p class="mb-1">
                             <i aria-hidden="true" class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor" id="hora"></span>h
                             <i aria-hidden="true" class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec" id="fecha"></span>
@@ -92,11 +92,11 @@
 
             }
             if(avisotipo == "0"){
-                avisotipo = "invitas gratis"
+                avisotipo = 'invitas <span class="upp">gratis</span>'
             }else{
-                avisotipo = "compartís 2x1"
+                avisotipo = 'compartís <span class="upp">2×1</span>'
             }
-            $('#avisotipo').text(avisotipo);
+            $('#avisotipo').html(avisotipo);
             $('#pelicula').text(peliculasArray[pelicula]);
             var f = fecha.split('-');
             var newFecha = f[2] + '/' + f[1];
