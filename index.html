@@ -32,10 +32,10 @@
     </header> -->
 
     <!-- <main class="container-fluid container-top d-flex align-item-center justify-content-center flex-column"> -->
-    <main class="container-fluid full-height d-flex align-item-center justify-content-center flex-column">
+    <main class="container-fluid container-top">
         <div class="row">
             <div class="col">
-                <h1><img src="images/isologo.svg" alt="Ratup" class="isologo"></h1>                
+                <h1><img src="images/isologo.svg" alt="Ratup" class="isologo"></h1>
                 <p>¿Qué tenés ganas de ver?</p>
                 <div class="buscar">
                     <form action="04_busqueda.html">
@@ -103,18 +103,6 @@
 
 
     <script src="js/main.js"></script>
-    <script>
-        $('#buscar').on('input', function () {
-            if ($('#buscar').val() != '') {
-                $('#reset').show();
-            } else {
-                $('#reset').hide();
-            }
-        });
-        $('#reset').on('click', function () {
-            $('#reset').hide();
-        });
-    </script>
 </body>
 
 </html>
