@@ -28,33 +28,61 @@
     <header class="navbar fixed-top navbar-expand">
         <h1 class="navbar-name w-100">Entradas</h1>
     </header>
-<main>
-    <div class="container-fluid subtitulo">
-        <div class="col">
-            <h2>Entradas pedidas</h2>
-        </div>
-    </div>
-    <div class="list-group timeline">
-        <a href="404.html" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100">
-                <div class="perfil">
-                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Julia">
-                    <div class="rating">5 <span class="sr-only">de 5 estrellas</span></div>
-                </div>
-                <div class="aviso-timeline">
-                    <p class="mb-1 movie">Bohemian Rhapsody</p>
-                    <p>Julia comparte <span class="upp">2×1</span></p>
-                    <p class="mb-1">
-                        <i aria-hidden="true" class="fas fa-clock"></i><span class="sr-only">Horario:</span> 19hs
-                        <i aria-hidden="true" class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
-                        <i aria-hidden="true" class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Belgrano
-                    </p>
+    <main class="entradas" role="alert">
+        <div class="pedidas">
+            <div class="container-fluid subtitulo">
+                <div class="col">
+                    <h2>Entradas pedidas</h2>
                 </div>
             </div>
-        </a>
-    </div>
+            <div class="list-group timeline">
+                <a href="404.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100">
+                        <div class="perfil">
+                            <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Julia">
+                            <div class="rating">5 <span class="sr-only">de 5 estrellas</span></div>
+                        </div>
+                        <div class="aviso-timeline">
+                            <p class="mb-1 movie">Bohemian Rhapsody</p>
+                            <p>Julia comparte <span class="upp">2×1</span></p>
+                            <p class="mb-1">
+                                <i aria-hidden="true" class="fas fa-clock"></i><span class="sr-only">Horario:</span> 19hs
+                                <i aria-hidden="true" class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                                <i aria-hidden="true" class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Belgrano
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="aceptadas" style="display: none;" >
+            <div class="container-fluid subtitulo">
+                <div class="col">
+                    <h2><i aria-hidden="true" class="fas fa-check"></i> Ofertas aceptadas</h2>
+                </div>
+            </div>
+            <div class="list-group timeline">
+                <a href="15_chat-50.html" class="list-group-item list-group-item-action flex-column align-items-start invitado">
+                    <div class="d-flex w-100">
+                        <div class="perfil">
+                            <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Julia">
+                            <div class="rating">5 <span class="sr-only">de 5 estrellas</span></div>
+                        </div>
+                        <div class="aviso-timeline">
+                            <p class="mb-1 movie">Bohemian Rhapsody</p>
+                            <p>Julia aceptó tu oferta</p>
+                            <div class="mensajes"><i aria-hidden="true" class="fas fa-envelope"></i> 1<span class="sr-only">nuevo mensaje</span></div>
+                            <p class="mb-1">
+                                <i aria-hidden="true" class="fas fa-clock"></i><span class="sr-only">Horario:</span> 19hs
+                                <i aria-hidden="true" class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> 27/11
+                                <i aria-hidden="true" class="fas fa-map-marker-alt"></i><span class="sr-only">Zona:</span> Belgrano                                
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
 
-</main>
 
 
     <nav class="navbar fixed-bottom navbar-expand">
@@ -64,7 +92,10 @@
                     <a class="nav-link" href="index.html"><i aria-hidden="true" class="fas fa-list-ul"></i> <span class="sr-only">Avisos</span></a>
                 </li>
                 <li class="nav-item active">
-                    <span class="nav-link"><i aria-hidden="true" class="fas fa-ticket-alt"></i> <span class="sr-only">Entradas (página actual)</span></span>
+                    <span class="nav-link"><i aria-hidden="true" class="fas fa-ticket-alt"></i> 
+                        <span class="sr-only">Entradas</span>
+                        <div class="notificacion" style="display: none;">1 <span class="sr-only">notificación</span></div>                    
+                    </span>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="07_me.html"><i aria-hidden="true" class="fas fa-user"></i> <span class="sr-only">Perfil</span></a>
@@ -83,6 +114,23 @@
 
     
     <script src="js/main.js"></script>
+    <script>
+        var ver = getUrlParameter('mensaje');
+        $(document).ready(function () {
+            if(ver==undefined){
+                setTimeout(cambiarEstado, 2000);
+            }else{
+                cambiarEstado();
+            }
+
+        });
+
+        function cambiarEstado(){
+            $('.pedidas').hide();
+            $('.aceptadas').show();
+            $('.notificacion').show();
+        }
+    </script>
 </body>
 
 </html>
