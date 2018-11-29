@@ -42,8 +42,8 @@
                     <div class="rating"><span aria-hidden="true">-</span><span class="sr-only">Sin calificación</span></div>
                 </div>
                 <div class="aviso-timeline">
-                    <p>Vos <span id="avisotipo"></span></p>
                     <p id="pelicula" class="mb-1 movie"></p>
+                    <p>Vos <span id="avisotipo"></span></p>
                     <p class="mb-1">
                         <i aria-hidden="true" class="fas fa-clock"></i><span class="sr-only">Horario:</span> <span class="hor" id="hora"></span>h
                         <i aria-hidden="true" class="fas fa-calendar-alt"></i><span class="sr-only">Fecha:</span> <span class="fec" id="fecha"></span>
@@ -61,10 +61,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav nav-fill w-100">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html"><i aria-hidden="true" class="fas fa-home"></i> <span class="sr-only">Inicio</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="00_timeline.html"><i aria-hidden="true" class="fas fa-list-ul"></i> <span class="sr-only">Avisos</span></a>
+                    <a class="nav-link" href="index.html"><i aria-hidden="true" class="fas fa-list-ul"></i> <span class="sr-only">Avisos</span></a>
                 </li>
                 <li class="nav-item active">
                     <span class="nav-link"><i aria-hidden="true" class="fas fa-ticket-alt"></i> <span class="sr-only">Entradas (página actual)</span></span>
@@ -101,12 +98,12 @@
             $('#editar').attr('href', '05_crear-editar.html');
 
         }
-        if (avisotipo == "0") {
-            avisotipo = "invitas gratis"
-        } else {
-            avisotipo = "compartís 2x1"
-        }
-        $('#avisotipo').text(avisotipo);
+        if(avisotipo == "0"){
+                avisotipo = 'invitas <span class="upp">gratis</span>'
+            }else{
+                avisotipo = 'compartís <span class="upp">2×1</span>'
+            }
+        $('#avisotipo').html(avisotipo);
         $('#pelicula').text(peliculasArray[pelicula]);
         var f = fecha.split('-');
         var newFecha = f[2] + '/' + f[1];

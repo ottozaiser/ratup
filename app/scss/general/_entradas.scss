@@ -9,13 +9,12 @@
         position: absolute;
         color: $secondaryColor;
         background-color: $primaryColor;
-        font-size: 1em;
+        font-size: 0.9em;
         margin: 0;
         padding: 5px;
-        height: 30px;
-        border-radius: 4px;
-        line-height: 1.4em;
-        top: 10px;
+        border-radius: 5px;
+        line-height: 1em;
+        bottom: 50px;
         right: 10px;
     }
 }
