@@ -21,6 +21,11 @@
         font-size: 1.1rem;
     }
 
+    input[type="date"]{
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
     fieldset{
         border: 1px solid $claro;
         padding: 1rem;
