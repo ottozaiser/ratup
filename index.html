@@ -451,9 +451,11 @@
             if (avisotipo != '') {
                 if (ttipo == 'invita gratis'){
                     num = '0';
-                }else if(ttipo == 'comparte <span class="upp">2×1</span>'){
+                }else if(ttipo == 'comparte 2×1'){
                     num = '1';
                 }
+
+                console.log(ttipo);
                 
                 if (avisotipo == num || avisotipo == 2) {
                     return true;

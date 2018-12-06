@@ -44,7 +44,7 @@
             <h2>Resultados</h2>
         </div>
     </div>
-
+    
     <div class="list-group timeline">
          <!-- DUMMY INFO BORRAR DE ACA -->
          <a href="404.html" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -385,6 +385,15 @@
 
 
     </div>
+    <div class="container mensajes" id="noresults">
+        <div class="col-12">
+            <img src="images/404.svg" alt="" class="logo">
+            <div class="vacio">
+                <h2>¡Uy!</h2>
+                <p class="copy">No encontramos nada que diga: <b id="busq"></b></p>
+            </div>
+        </div>
+    </div>
 </main>
 
 
@@ -411,11 +420,12 @@
         $('#reset').on('click', function () {
             $('.list-group-item').hide();
             $('#reset').hide();
+            $('#noresults').hide();
         });
-
         var busqueda = getUrlParameter('buscar');
         if (busqueda != '') {
             $('#buscar').val(busqueda.replace('+', ' '));
+            $('#busq').text(busqueda.replace('+', ' '));
             $('#reset').show();
 
             busqueda = busqueda.toUpperCase();
@@ -430,6 +440,7 @@
                 //console.log(movieTitle);
                 if(common.length != 0) { 
                     $(this).show();
+                    $('#noresults').hide();
                 };                
             });
         }
