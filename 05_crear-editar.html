@@ -36,9 +36,11 @@
             </div>
         </div>
         <div class="container crear">
-            <div class="alert alert-danger" role="alert">
-                <p>Comprobá los siguientes errores del formulario:</p>
-                <ul id="container"></ul>
+            <div id="alerta" tabindex="-1">
+                <div class="alert alert-danger" role="alert">
+                    <p>Comprobá los siguientes errores del formulario:</p>
+                    <ul id="container"></ul>
+                </div>
             </div>
             <div class="col-12">
                 <form action="06_confirmar.html">
@@ -239,7 +241,9 @@
             invalidHandler: function (event, validator) {
                 var errors = validator.numberOfInvalids();
                 if (errors) {
-                    $("html, body").scrollTop(50);
+                    location.hash = "#alerta";
+                    $("html, body").scrollTop(50); 
+                    $('#alerta').focus(); 
 
                 }
             },
